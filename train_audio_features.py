@@ -8,6 +8,25 @@ import sys
 import codecs
 import warnings
 from pathlib import Path
+import json
+import csv
+import argparse
+import time
+
+# colorama optional for colored output
+try:
+    from colorama import init as _colorama_init, Fore, Style
+    _colorama_init(autoreset=True)
+    COLORAMA_AVAILABLE = True
+except Exception:
+    COLORAMA_AVAILABLE = False
+    class Fore:
+        RED = ""
+        GREEN = ""
+        YELLOW = ""
+        CYAN = ""
+    class Style:
+        RESET_ALL = ""
 
 import numpy as np
 import pandas as pd
@@ -304,14 +323,36 @@ class AudioFeatureTrainer:
             return defaults
 
     def train_trainset_features(self):
-        """Train đặc trưng cho trainset"""
-        print("=== Train đặc trưng âm thanh cho Trainset ===\n")
-        trainset_metadata = os.path.join(self.metadata_folder, "trainset.csv")
-        if not os.path.exists(trainset_metadata):
-            raise FileNotFoundError(f"Missing metadata: {trainset_metadata}")
+        """Train đặc trưng cho trainset (ghép từ clean_testset + noisy_testset)"""
+        print("=== Train đặc trưng âm thanh cho Trainset (clean + noisy) ===\n")
 
-        df = pd.read_csv(trainset_metadata, encoding='utf-8')
-        print(f"Đã đọc {len(df)} records từ trainset")
+        clean_path = os.path.join(self.metadata_folder, "clean_testset.csv")
+        noisy_path = os.path.join(self.metadata_folder, "noisy_testset.csv")
+
+        found = []
+        if os.path.exists(clean_path):
+            df_clean = pd.read_csv(clean_path, encoding='utf-8')
+            df_clean = df_clean.assign(split='clean')
+            found.append(df_clean)
+            print(f"Đã đọc {len(df_clean)} records từ clean_testset.csv")
+        else:
+            print(f"  ⚠️  Không tìm thấy {clean_path}")
+
+        if os.path.exists(noisy_path):
+            df_noisy = pd.read_csv(noisy_path, encoding='utf-8')
+            df_noisy = df_noisy.assign(split='noisy')
+            found.append(df_noisy)
+            print(f"Đã đọc {len(df_noisy)} records từ noisy_testset.csv")
+        else:
+            print(f"  ⚠️  Không tìm thấy {noisy_path}")
+
+        if not found:
+            raise FileNotFoundError(f"Missing metadata files: {clean_path} and {noisy_path}")
+
+        # concatenate both dataframes
+        df = pd.concat(found, ignore_index=True)
+        print(f"Tổng cộng {len(df)} records (clean + noisy)")
+
         super_data = []
 
         for idx, row in tqdm(df.iterrows(), total=len(df), desc="Train đặc trưng trainset"):
@@ -372,10 +413,215 @@ class AudioFeatureTrainer:
         self.update_other_datasets()
         return super_df
 
+def cprint(msg, color=None):
+    if not COLORAMA_AVAILABLE or color is None:
+        print(msg)
+    else:
+        print(f"{color}{msg}{Style.RESET_ALL}")
+
+# Thêm helper chuyển đối tượng sang định dạng serializable
+def to_serializable(obj):
+    try:
+        import numpy as _np
+        if isinstance(obj, _np.generic):
+            return obj.item()
+        if isinstance(obj, _np.ndarray):
+            return obj.tolist()
+    except Exception:
+        pass
+    if isinstance(obj, (list, dict, str, int, float, bool)) or obj is None:
+        return obj
+    if hasattr(obj, "tolist"):
+        try:
+            return obj.tolist()
+        except Exception:
+            pass
+    return str(obj)
+
+# Thêm helper tìm file audio trong thư mục trainset
+def find_audio_file(root: Path, name: str):
+    if not name:
+        return None
+    p = root / name
+    if p.exists():
+        return p
+    for ext in (".mp3", ".wav", ".flac", ".ogg"):
+        p2 = root / (name + ext)
+        if p2.exists():
+            return p2
+    lowered = name.lower()
+    for f in root.iterdir():
+        if f.name.lower() == lowered:
+            return f
+    for f in root.iterdir():
+        if f.name.lower().startswith(lowered):
+            return f
+    return None
+
+# Thay thế hàm main bằng phiên bản hỗ trợ chạy theo batch (mỗi step tối đa batch_size file)
 def main():
-    """Hàm chính"""
+    parser = argparse.ArgumentParser(description="Extract features in batches (steps).")
+    parser.add_argument("--batch-size", type=int, default=150, help="Số file tối đa mỗi step (mặc định 150)")
+    parser.add_argument("--step", type=int, default=None, help="Chạy step cụ thể (1-based). Nếu không set, dùng --start-index")
+    parser.add_argument("--start-index", type=int, default=None, help="Chỉ xử lý từ index bắt đầu (0-based).")
+    parser.add_argument("--max-files", type=int, default=None, help="Giới hạn tổng số file xử lý từ start (tùy chọn).")
+    parser.add_argument("--all", action="store_true", help="Chạy toàn bộ các batch tuần tự (ghi nhiều file part).")
+    parser.add_argument("--append-master", action="store_true", help="Ghi nối kết quả vào super_metadata/ket_qua_cuoi.csv master.")
+    parser.add_argument("--from-step", type=int, default=None, help="Khi --all set, bắt đầu từ step này (1-based).")
+    args = parser.parse_args()
+
     trainer = AudioFeatureTrainer()
-    trainer.run_training()
+
+    trainset_dir = Path(trainer.trainset_folder)
+    if not trainset_dir.exists():
+        cprint(f"Không tìm thấy thư mục trainset: {trainset_dir}", Fore.RED)
+        return
+
+    csv_in = Path(trainer.metadata_folder) / 'trainset.csv'
+    if not csv_in.exists():
+        cprint(f"Không tìm thấy metadata: {csv_in}", Fore.RED)
+        return
+
+    # đọc toàn bộ hàng metadata (nhẹ, dùng slicing cho batch)
+    with csv_in.open(newline='', encoding='utf-8') as f:
+        reader = list(csv.DictReader(f))
+    total = len(reader)
+    if total == 0:
+        cprint("Không có hàng trong trainset.csv", Fore.YELLOW)
+        return
+
+    batch_size = max(1, args.batch_size)
+
+    # xác định các batch để chạy
+    batches = []
+    if args.all:
+        # tạo list các (start, end, step_no)
+        step_no = 1
+        for start in range(0, total, batch_size):
+            end = min(start + batch_size, total)
+            batches.append((start, end, step_no))
+            step_no += 1
+        # apply from-step filter
+        if args.from_step:
+            batches = [b for b in batches if b[2] >= max(1, args.from_step)]
+    else:
+        if args.step is not None:
+            step = max(1, args.step)
+            start = (step - 1) * batch_size
+            end = min(start + batch_size, total)
+            batches.append((start, end, step))
+        else:
+            if args.start_index is None:
+                start = 0
+            else:
+                start = max(0, args.start_index)
+            end = min(start + batch_size, total)
+            batches.append((start, end, 1 + start // batch_size))
+
+    # prepare master accumulators
+    master_rows = []
+    master_fieldnames = set()
+    metadata_fields = list(reader[0].keys()) if total>0 else ['audio_name']
+
+    # cache defaults to avoid repeated calls
+    DEFAULT_FEATURES = trainer.get_default_features()
+
+    # process each batch
+    for start, end, step_no in batches:
+        cprint(f"\n--- Batch {step_no}: items {start}..{end-1} (count {end-start}) ---", Fore.CYAN)
+        out_rows = []
+        processed = 0
+        failed = 0
+        t0 = time.time()
+
+        # use tqdm for per-batch progress
+        for i in tqdm(range(start, end), desc=f"Batch {step_no}", unit="file"):
+            row = reader[i]
+            audio_name = row.get('audio_name') or row.get('audio') or row.get('filename')
+            if not audio_name:
+                cprint(f"[{i}] Bỏ qua: không có audio_name", Fore.YELLOW)
+                failed += 1
+                continue
+
+            audio_path = find_audio_file(trainset_dir, audio_name)
+            if not audio_path:
+                cprint(f"[{i}] Không tìm thấy file: {audio_name}", Fore.YELLOW)
+                out_entry = dict(row)
+                # fill default features columns (no features_json)
+                for k, v in DEFAULT_FEATURES.items():
+                    out_entry[k] = v
+                out_rows.append(out_entry)
+                master_rows.append(out_entry)
+                master_fieldnames.update(out_entry.keys())
+                failed += 1
+                continue
+
+            try:
+                feats = trainer.extract_audio_features(str(audio_path))
+                # normalize feature values and explode into columns (no features_json)
+                feats_serial = {k: to_serializable(v) for k, v in feats.items()}
+                out_entry = dict(row)
+                out_entry.update(feats_serial)        # explode features into columns
+                out_rows.append(out_entry)
+                master_rows.append(out_entry)
+                master_fieldnames.update(out_entry.keys())
+                processed += 1
+            except Exception as e:
+                cprint(f"[{i}] Lỗi extract {audio_name}: {e}", Fore.RED)
+                out_entry = dict(row)
+                for k, v in DEFAULT_FEATURES.items():
+                    out_entry[k] = v
+                out_rows.append(out_entry)
+                master_rows.append(out_entry)
+                master_fieldnames.update(out_entry.keys())
+                failed += 1
+
+        dt = time.time() - t0
+        cprint(f"Batch {step_no} done. processed={processed} failed={failed} time={dt:.1f}s", Fore.GREEN)
+
+        # ensure we don't include the JSON column
+        if 'features_json' in master_fieldnames:
+            master_fieldnames.discard('features_json')
+
+        # determine full field list: metadata fields + feature fields (excluding duplicates)
+        feature_fields = sorted([f for f in master_fieldnames if f not in metadata_fields])
+        fieldnames_part = metadata_fields + feature_fields
+
+        # write part CSV (use quoting to handle commas inside values)
+        part_csv = Path(trainer.super_metadata_folder) / f'ket_qua_cuoi_part_{step_no:03d}.csv'
+        with part_csv.open('w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames_part, extrasaction='ignore', quoting=csv.QUOTE_MINIMAL)
+            writer.writeheader()
+            for r in out_rows:
+                row_for_write = {k: (r.get(k, '') if r.get(k, '') is not None else '') for k in fieldnames_part}
+                writer.writerow(row_for_write)
+        cprint(f"Batch {step_no} written -> {part_csv}", Fore.CYAN)
+
+        # if not running all, break after first requested batch
+        if not args.all:
+            break
+
+    # write/append master CSV if requested
+    if args.append_master or args.all:
+        # ensure we don't include the JSON column
+        if 'features_json' in master_fieldnames:
+            master_fieldnames.discard('features_json')
+
+        master_csv = Path(trainer.super_metadata_folder) / 'ket_qua_cuoi.csv'
+        feature_fields = sorted([f for f in master_fieldnames if f not in metadata_fields])
+        fieldnames_master = metadata_fields + feature_fields
+        mode = 'a' if master_csv.exists() and args.append_master else 'w'
+        write_header = not (master_csv.exists() and args.append_master)
+        with master_csv.open(mode, newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames_master, extrasaction='ignore', quoting=csv.QUOTE_MINIMAL)
+            if write_header:
+                writer.writeheader()
+            for r in master_rows:
+                row_for_write = {k: (r.get(k, '') if r.get(k, '') is not None else '') for k in fieldnames_master}
+                writer.writerow(row_for_write)
+        cprint(f"Master results updated -> {master_csv}", Fore.GREEN)
+
+    cprint("All done.", Fore.CYAN)
 
 if __name__ == "__main__":
     main()

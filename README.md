@@ -143,3 +143,10 @@ Hệ thống sử dụng thuật toán cosine similarity để so sánh các đ�
 2. **Lỗi soundfile**: Cài đặt thêm `pip install soundfile`
 3. **Lỗi memory**: Giảm batch size hoặc xử lý từng file nhỏ
 4. **Lỗi encoding**: Đảm bảo file CSV có encoding UTF-8
+
+
+
+Chạy một batch đầu (150 file): python train_audio_features.py
+Chạy step 2: python train_audio_features.py --step 2
+Chạy tất cả tuần tự và ghi master: python train_audio_features.py --all --append-master
+Chạy tất cả bắt đầu từ step 4: python train_audio_features.py --all --from-step 4
