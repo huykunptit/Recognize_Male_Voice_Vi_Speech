@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Required - ViSpeech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .main-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            padding: 40px;
+            max-width: 800px;
+        }
+        .alert-custom {
+            border-left: 5px solid #ffc107;
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-weight: 600;
+        }
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <div class="text-center mb-5">
+                <h1 class="display-5 text-warning mb-3">
+                    <i class="fas fa-exclamation-triangle"></i> Training Required
+                </h1>
+                <p class="lead text-muted">Dữ liệu chưa được training để so sánh giọng nói</p>
+            </div>
+
+            <div class="alert alert-custom" role="alert">
+                <h4 class="alert-heading">
+                    <i class="fas fa-info-circle"></i> Thông báo quan trọng
+                </h4>
+                <p>Hệ thống phát hiện rằng tất cả đặc trưng âm thanh trong database đều có giá trị 0. Điều này có nghĩa là dữ liệu chưa được training để trích xuất đặc trưng thực tế từ các file audio.</p>
+                <hr>
+                <p class="mb-0">Để sử dụng tính năng so sánh giọng nói, bạn cần chạy training trước.</p>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">
+                        <i class="fas fa-cogs"></i> Hướng dẫn Training
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <h6>Bước 1: Cài đặt dependencies</h6>
+                    <div class="code-block">
+                        pip install -r requirements.txt
+                    </div>
+
+                    <h6>Bước 2: Chạy training</h6>
+                    <div class="code-block">
+                        python simple_training.py
+                    </div>
+
+                    <h6>Bước 3: Kiểm tra kết quả</h6>
+                    <div class="code-block">
+                        python debug_voice_comparison.py
+                    </div>
+
+                    <h6>Bước 4: Khởi động lại Web App</h6>
+                    <div class="code-block">
+                        python run_web_app.py
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">
+                        <i class="fas fa-question-circle"></i> Giải thích
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Training là gì?</strong></p>
+                    <p>Training là quá trình trích xuất các đặc trưng âm thanh thực tế từ các file audio trong folder <code>trainset/</code> và lưu vào file <code>super_metadata/trainset.csv</code>.</p>
+                    
+                    <p><strong>Tại sao cần training?</strong></p>
+                    <p>Để so sánh giọng nói, hệ thống cần có dữ liệu đặc trưng thực tế của từng file audio. Hiện tại tất cả đặc trưng đều là 0, nên không thể thực hiện so sánh có ý nghĩa.</p>
+                    
+                    <p><strong>Training sẽ làm gì?</strong></p>
+                    <ul>
+                        <li>Đọc từng file audio trong <code>trainset/</code></li>
+                        <li>Trích xuất 17+ đặc trưng âm thanh (pitch, MFCC, tempo, etc.)</li>
+                        <li>Lưu kết quả vào <code>super_metadata/trainset.csv</code></li>
+                        <li>Cho phép Web App thực hiện so sánh giọng nói</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="/" class="btn btn-primary btn-lg">
+                    <i class="fas fa-arrow-left"></i> Quay lại
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

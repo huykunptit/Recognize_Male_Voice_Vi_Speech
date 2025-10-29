@@ -47,7 +47,7 @@ def main():
     if not check_dependencies():
         return
 
-    print("🎵 ViSpeech - Training Đặc trưng Âm thanh")
+    print("ViSpeech - Training Dac trung Am thanh")
     print("=" * 60)
     
     # Kiểm tra các file cần thiết

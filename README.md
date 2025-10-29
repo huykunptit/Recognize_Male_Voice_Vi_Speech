@@ -1,6 +1,12 @@
-# ViSpeech - Hệ thống So sánh Giọng nói
+# Xây dựng hệ CSDL lưu trữ và tìm kiếm giọng nói đàn ông.
 
 Hệ thống phân tích và so sánh giọng nói với metadata mở rộng và khả năng tìm kiếm giọng tương tự.
+# Thành viên tham gia
+1. Nguyễn Quốc Huy
+2. Nguyễn Tiến Dũng
+3. Trần Thị Ngọc Anh
+4. Hà Văn Nghĩa
+
 
 ## 🚀 Tính năng chính
 
@@ -18,6 +24,9 @@ Hệ thống phân tích và so sánh giọng nói với metadata mở rộng v�
 - Script: `voice_comparison_app.py`
 - Chức năng: Upload file audio và tìm giọng tương tự nhất
 - Sử dụng 15+ đặc trưng âm thanh để so sánh
+
+- Dự kiến: Tìm hiểu thuật toán K-Nearest Neighbors (KNN)
+
 
 ### 4. Super Metadata với 15+ trường thông tin
 - Script: `create_super_metadata.py`
@@ -91,7 +100,12 @@ python create_super_metadata.py
 python run_training.py
 ```
 
-## 🎵 15+ Đặc trưng âm thanh được trích xuất
+### 7. Khởi động Web App
+```bash
+python run_web_app.py
+```
+
+##  Đặc trưng âm thanh được trích xuất
 
 1. **Pitch (Độ cao giọng)**: Mean, Std, Range
 2. **Spectral Centroid (Độ trầm bổng)**: Mean, Std
@@ -114,14 +128,31 @@ python run_training.py
 19. **Onset Strength**: Mean, Std
 20. **Spectral Flux**: Dòng phổ
 
+## 🌐 Web App So sánh Giọng nói
+
+### Tính năng Web App:
+- **Upload file audio**: Drag & drop hoặc click để chọn file
+- **K-NN Algorithm**: Sử dụng K-Nearest Neighbors để tìm giọng tương tự
+- **Real-time Analysis**: Phân tích và hiển thị kết quả ngay lập tức
+- **Similarity Percentage**: Hiển thị % độ tương tự với từng speaker
+- **Speaker Information**: Hiển thị tên và thông tin speaker
+
+### Cách sử dụng Web App:
+1. Chạy `python run_web_app.py`
+2. Truy cập http://localhost:5000
+3. Upload file audio (MP3, WAV, M4A, FLAC)
+4. Click "Kiểm tra Giọng nói"
+5. Xem kết quả top 10 giọng tương tự nhất
+
 ## 🔍 So sánh giọng nói
 
-Hệ thống sử dụng thuật toán cosine similarity để so sánh các đặc trưng âm thanh:
+Hệ thống sử dụng thuật toán K-Nearest Neighbors (K-NN) với cosine similarity:
 
 1. Upload file audio cần so sánh
-2. Trích xuất 15+ đặc trưng âm thanh
-3. So sánh với kho trainset
-4. Hiển thị top 10 giọng tương tự nhất
+2. Trích xuất 17+ đặc trưng âm thanh quan trọng
+3. Chuẩn hóa features với StandardScaler
+4. Tìm K neighbors gần nhất trong kho trainset
+5. Hiển thị top 10 giọng tương tự nhất với % similarity
 
 ## 📊 Kết quả
 

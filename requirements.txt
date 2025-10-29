@@ -7,3 +7,8 @@ tqdm>=4.62.0
 scikit-learn>=1.0.0
 matplotlib>=3.5.0
 seaborn>=0.11.0
+flask>=2.0.0
+werkzeug>=2.0.0
+pygame>=2.0.0
+sounddevice>=0.4.0
+# tkinter thường có sẵn với Python, không cần cài đặt
