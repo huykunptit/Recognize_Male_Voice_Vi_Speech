@@ -3,173 +3,760 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViSpeech - So sánh Giọng nói</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Tìm kiếm Giọng nói Tương tự</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
         }
-        .main-container {
-            background: rgba(255, 255, 255, 0.95);
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            margin: 50px auto;
-            padding: 40px;
-            max-width: 800px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
         }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .model-status {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .model-status h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .model-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .info-item {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .info-label {
+            font-size: 0.85em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .train-section {
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .upload-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
         .upload-area {
             border: 3px dashed #667eea;
             border-radius: 15px;
-            padding: 60px 20px;
-            text-align: center;
-            background: rgba(102, 126, 234, 0.05);
-            transition: all 0.3s ease;
+            padding: 40px;
+            margin: 20px 0;
+            background: white;
+            transition: all 0.3s;
             cursor: pointer;
         }
+
         .upload-area:hover {
             border-color: #764ba2;
-            background: rgba(118, 75, 162, 0.1);
+            background: #f8f9fa;
         }
+
         .upload-area.dragover {
-            border-color: #28a745;
-            background: rgba(40, 167, 69, 0.1);
+            border-color: #764ba2;
+            background: #e8e9ff;
         }
-        .btn-primary {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            border: none;
-            border-radius: 25px;
-            padding: 12px 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+
+        .upload-icon {
+            font-size: 4em;
+            color: #667eea;
+            margin-bottom: 20px;
         }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+
+        .upload-text {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
         }
-        .feature-card {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            border-radius: 15px;
-            padding: 20px;
-            margin: 20px 0;
-            border-left: 5px solid #667eea;
+
+        .upload-hint {
+            font-size: 0.9em;
+            color: #666;
         }
-        .loading {
+
+        #fileInput {
             display: none;
         }
-        .spinner-border {
+
+        .file-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e8f5e9;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .file-info.show {
+            display: block;
+        }
+
+        .results-section {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .results-section.show {
+            display: block;
+        }
+
+        .results-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .results-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .results-content {
+            background: white;
+            border-radius: 0 0 10px 10px;
+            overflow: hidden;
+        }
+
+        .result-item {
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .result-item:hover {
+            background: #f8f9fa;
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .result-rank {
+            font-size: 1.5em;
+            font-weight: bold;
             color: #667eea;
+            min-width: 50px;
+        }
+
+        .result-info {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .result-speaker {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .result-audio {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .result-similarity {
+            text-align: right;
+        }
+
+        .similarity-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #4caf50;
+        }
+
+        .similarity-label {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .alert {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .alert-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .k-input {
+            margin: 20px 0;
+        }
+
+        .k-input label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .k-input input {
+            width: 100px;
+            padding: 10px;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        /* Recording Section */
+        .recording-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .record-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .record-btn {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: none;
+            font-size: 2em;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .record-btn.record {
+            background: #f44336;
+            color: white;
+        }
+
+        .record-btn.record:hover {
+            background: #d32f2f;
+            transform: scale(1.1);
+        }
+
+        .record-btn.record.recording {
+            background: #f44336;
+            animation: pulse 1.5s infinite;
+        }
+
+        .record-btn.stop {
+            background: #ff9800;
+            color: white;
+        }
+
+        .record-btn.stop:hover {
+            background: #f57c00;
+            transform: scale(1.1);
+        }
+
+        .record-btn.play {
+            background: #4caf50;
+            color: white;
+        }
+
+        .record-btn.play:hover {
+            background: #45a049;
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .timer-display {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .timer-display.recording {
+            color: #f44336;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        .audio-preview {
+            margin: 20px 0;
+            display: none;
+        }
+
+        .audio-preview.show {
+            display: block;
+        }
+
+        .audio-preview audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 45%;
+            height: 1px;
+            background: #e0e0e0;
+        }
+
+        .divider::before {
+            left: 0;
+        }
+
+        .divider::after {
+            right: 0;
+        }
+
+        .divider span {
+            background: white;
+            padding: 0 15px;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="main-container">
-            <div class="text-center mb-5">
-                <h1 class="display-4 text-primary mb-3">
-                    <i class="fas fa-microphone-alt"></i> ViSpeech
-                </h1>
-                <p class="lead text-muted">So sánh và tìm kiếm giọng nói tương tự</p>
+        <div class="header">
+            <h1>🎤 Tìm kiếm Giọng nói Tương tự</h1>
+            <p>Sử dụng thuật toán K-Nearest Neighbors để tìm giọng nói gần giống nhất</p>
+        </div>
+
+        <div class="content">
+            <!-- Model Status -->
+            <div class="model-status" id="modelStatus">
+                <h3>📊 Trạng thái Model</h3>
+                <div id="modelInfo">
+                    <p>Đang kiểm tra model...</p>
+                </div>
             </div>
 
-            <!-- Flash Messages -->
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    {% for message in messages %}
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            <i class="fas fa-exclamation-triangle"></i> {{ message }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                        </div>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
+            <!-- Train Section -->
+            <div class="train-section">
+                <h3 style="margin-bottom: 15px;">🔧 Train Model</h3>
+                <p style="margin-bottom: 15px; color: #666;">
+                    Train model từ dữ liệu trong <code>super_metadata/male_only</code>
+                </p>
+                <button class="btn" id="trainBtn" onclick="trainModel()">
+                    🚀 Train Model
+                </button>
+            </div>
 
-            <!-- Upload Form -->
-            <form action="/upload" method="post" enctype="multipart/form-data" id="uploadForm">
-                <div class="upload-area" id="uploadArea">
-                    <i class="fas fa-cloud-upload-alt fa-3x text-primary mb-3"></i>
-                    <h4>Kéo thả file audio vào đây</h4>
-                    <p class="text-muted">hoặc click để chọn file</p>
-                    <input type="file" name="file" id="fileInput" accept=".mp3,.wav,.m4a,.flac" style="display: none;">
-                    <div class="mt-3">
-                        <small class="text-muted">
-                            <i class="fas fa-info-circle"></i> 
-                            Hỗ trợ: MP3, WAV, M4A, FLAC
-                        </small>
-                    </div>
-                </div>
+            <!-- Alert Messages -->
+            <div id="alert" class="alert"></div>
+
+            <!-- Recording Section -->
+            <div class="recording-section">
+                <h3 style="margin-bottom: 20px;">🎙️ Ghi âm Trực tiếp</h3>
                 
-                <div class="text-center mt-4">
-                    <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
-                        <i class="fas fa-search"></i> Kiểm tra Giọng nói
+                <div class="timer-display" id="timerDisplay">00:00</div>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <div class="record-controls">
+                    <button class="record-btn record" id="recordBtn" onclick="toggleRecording()">
+                        🎤
+                    </button>
+                    <button class="record-btn stop" id="stopBtn" onclick="stopRecording()" style="display: none;">
+                        ⏹️
+                    </button>
+                    <button class="record-btn play" id="playBtn" onclick="playRecording()" style="display: none;">
+                        ▶️
                     </button>
                 </div>
-            </form>
 
-            <!-- Loading -->
-            <div class="loading text-center mt-4" id="loading">
-                <div class="spinner-border" role="status">
-                    <span class="visually-hidden">Đang xử lý...</span>
+                <div class="audio-preview" id="audioPreview">
+                    <p><strong>Audio đã ghi:</strong></p>
+                    <audio id="audioPlayer" controls></audio>
                 </div>
-                <p class="mt-2">Đang phân tích giọng nói...</p>
+
+                <p style="color: #666; font-size: 0.9em; margin-top: 15px;">
+                    ⏱️ Tối đa 30 giây | Cho phép truy cập microphone khi được yêu cầu
+                </p>
             </div>
 
-            <!-- Features Info -->
-            <div class="feature-card mt-5">
-                <h5><i class="fas fa-cogs"></i> Công nghệ sử dụng</h5>
-                <div class="row">
-                    <div class="col-md-6">
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success"></i> K-Nearest Neighbors (K-NN)</li>
-                            <li><i class="fas fa-check text-success"></i> MFCC Features</li>
-                            <li><i class="fas fa-check text-success"></i> Spectral Analysis</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success"></i> Pitch Detection</li>
-                            <li><i class="fas fa-check text-success"></i> Tempo Analysis</li>
-                            <li><i class="fas fa-check text-success"></i> Voice Similarity</li>
-                        </ul>
-                    </div>
+            <div class="divider">
+                <span>HOẶC</span>
+            </div>
+
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <h3 style="margin-bottom: 20px;">📁 Upload File Audio</h3>
+                
+                <div class="upload-area" id="uploadArea" onclick="document.getElementById('fileInput').click()">
+                    <div class="upload-icon">🎵</div>
+                    <div class="upload-text">Click để chọn file hoặc kéo thả file vào đây</div>
+                    <div class="upload-hint">Hỗ trợ: MP3, WAV, M4A, FLAC, OGG (tối đa 50MB)</div>
                 </div>
+
+                <input type="file" id="fileInput" accept="audio/*" onchange="handleFileSelect(event)">
+
+                <div class="k-input">
+                    <label>Số lượng kết quả tìm kiếm (K):</label>
+                    <input type="number" id="kValue" value="10" min="1" max="50">
+                </div>
+
+                <div class="file-info" id="fileInfo"></div>
+
+                <button class="btn" id="searchBtn" onclick="searchVoice()" style="margin-top: 20px;" disabled>
+                    🔍 Tìm kiếm Giọng nói Tương tự
+                </button>
+            </div>
+
+            <!-- Loading -->
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Đang xử lý...</p>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="resultsSection">
+                <div class="results-header">
+                    <div class="results-title">🎯 Kết quả Tìm kiếm</div>
+                    <div style="font-size: 0.9em;">Top <span id="resultCount">10</span> giọng nói tương tự nhất</div>
+                </div>
+                <div class="results-content" id="resultsContent"></div>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Upload area functionality
-        const uploadArea = document.getElementById('uploadArea');
-        const fileInput = document.getElementById('fileInput');
-        const uploadForm = document.getElementById('uploadForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const loading = document.getElementById('loading');
+        let selectedFile = null;
+        let mediaRecorder = null;
+        let audioChunks = [];
+        let recordedAudio = null;
+        let recordingTimer = null;
+        let recordingSeconds = 0;
+        const MAX_RECORDING_TIME = 30; // 30 seconds
 
-        // Click to select file
-        uploadArea.addEventListener('click', () => {
-            fileInput.click();
-        });
+        // Load model info on page load
+        window.onload = function() {
+            loadModelInfo();
+            checkMicrophonePermission();
+        };
 
-        // File input change
-        fileInput.addEventListener('change', (e) => {
-            console.log('File input changed');
-            console.log('Files:', e.target.files);
-            console.log('Files length:', e.target.files.length);
-            
-            if (e.target.files && e.target.files.length > 0) {
-                const fileName = e.target.files[0].name;
-                uploadArea.innerHTML = `
-                    <i class="fas fa-file-audio fa-3x text-success mb-3"></i>
-                    <h4>File đã chọn: ${fileName}</h4>
-                    <p class="text-muted">Click để chọn file khác</p>
-                `;
+        function checkMicrophonePermission() {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(() => {
+                    console.log('Microphone permission granted');
+                })
+                .catch(err => {
+                    console.log('Microphone permission denied:', err);
+                    showAlert('info', '⚠️ Cần quyền truy cập microphone để ghi âm. Vui lòng cho phép khi được yêu cầu.');
+                });
+        }
+
+        async function toggleRecording() {
+            if (mediaRecorder && mediaRecorder.state === 'recording') {
+                stopRecording();
+                return;
             }
-        });
+
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+                recordingSeconds = 0;
+
+                mediaRecorder.ondataavailable = (event) => {
+                    if (event.data.size > 0) {
+                        audioChunks.push(event.data);
+                    }
+                };
+
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    recordedAudio = audioBlob;
+                    
+                    // Create audio URL for preview
+                    const audioUrl = URL.createObjectURL(audioBlob);
+                    const audioPlayer = document.getElementById('audioPlayer');
+                    audioPlayer.src = audioUrl;
+                    document.getElementById('audioPreview').classList.add('show');
+                    
+                    // Convert to File object for upload
+                    const fileName = `recording_${Date.now()}.webm`;
+                    selectedFile = new File([audioBlob], fileName, { type: 'audio/webm' });
+                    
+                    // Update file info
+                    const fileInfo = document.getElementById('fileInfo');
+                    fileInfo.innerHTML = `
+                        <strong>🎙️ Audio đã ghi:</strong> ${fileName}<br>
+                        <strong>⏱️ Thời lượng:</strong> ${formatTime(recordingSeconds)}<br>
+                        <strong>📊 Kích thước:</strong> ${(audioBlob.size / 1024).toFixed(2)} KB
+                    `;
+                    fileInfo.classList.add('show');
+                    document.getElementById('searchBtn').disabled = false;
+                    
+                    // Stop all tracks
+                    stream.getTracks().forEach(track => track.stop());
+                    
+                    showAlert('success', '✓ Đã ghi âm thành công! Bạn có thể phát lại hoặc tìm kiếm.');
+                };
+
+                // Reset UI
+                document.getElementById('progressFill').style.width = '0%';
+                document.getElementById('timerDisplay').textContent = '00:00';
+                document.getElementById('audioPreview').classList.remove('show');
+                document.getElementById('playBtn').style.display = 'none';
+                
+                // Start recording
+                mediaRecorder.start();
+                
+                // Update UI
+                document.getElementById('recordBtn').classList.add('recording');
+                document.getElementById('recordBtn').textContent = '⏸️';
+                document.getElementById('stopBtn').style.display = 'inline-block';
+                document.getElementById('timerDisplay').classList.add('recording');
+                
+                // Start timer
+                startTimer();
+                
+            } catch (error) {
+                console.error('Error accessing microphone:', error);
+                showAlert('error', '✗ Không thể truy cập microphone. Vui lòng kiểm tra quyền truy cập.');
+            }
+        }
+
+        function stopRecording() {
+            if (mediaRecorder && mediaRecorder.state === 'recording') {
+                mediaRecorder.stop();
+                stopTimer();
+                
+                // Update UI
+                document.getElementById('recordBtn').classList.remove('recording');
+                document.getElementById('recordBtn').textContent = '🎤';
+                document.getElementById('stopBtn').style.display = 'none';
+                document.getElementById('playBtn').style.display = 'inline-block';
+                document.getElementById('timerDisplay').classList.remove('recording');
+            }
+        }
+
+        function startTimer() {
+            recordingSeconds = 0;
+            updateTimer();
+            updateProgress();
+            
+            recordingTimer = setInterval(() => {
+                recordingSeconds++;
+                updateTimer();
+                updateProgress();
+                
+                // Auto stop at 30 seconds
+                if (recordingSeconds >= MAX_RECORDING_TIME) {
+                    stopRecording();
+                    showAlert('info', '⏱️ Đã đạt giới hạn 30 giây. Tự động dừng ghi âm.');
+                }
+            }, 1000);
+        }
+
+        function stopTimer() {
+            if (recordingTimer) {
+                clearInterval(recordingTimer);
+                recordingTimer = null;
+            }
+        }
+
+        function updateTimer() {
+            const minutes = Math.floor(recordingSeconds / 60);
+            const seconds = recordingSeconds % 60;
+            document.getElementById('timerDisplay').textContent = 
+                `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+
+        function updateProgress() {
+            const progress = (recordingSeconds / MAX_RECORDING_TIME) * 100;
+            document.getElementById('progressFill').style.width = `${Math.min(progress, 100)}%`;
+        }
+
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `${mins}:${String(secs).padStart(2, '0')}`;
+        }
+
+        function playRecording() {
+            const audioPlayer = document.getElementById('audioPlayer');
+            if (audioPlayer.src) {
+                audioPlayer.play();
+            }
+        }
 
         // Drag and drop
+        const uploadArea = document.getElementById('uploadArea');
+        
         uploadArea.addEventListener('dragover', (e) => {
             e.preventDefault();
             uploadArea.classList.add('dragover');
@@ -182,46 +769,184 @@
         uploadArea.addEventListener('drop', (e) => {
             e.preventDefault();
             uploadArea.classList.remove('dragover');
-            
-            console.log('File dropped');
-            console.log('Files:', e.dataTransfer.files);
-            console.log('Files length:', e.dataTransfer.files.length);
-            
             const files = e.dataTransfer.files;
-            if (files && files.length > 0) {
-                // Tạo DataTransfer object để gán files
-                const dt = new DataTransfer();
-                for (let i = 0; i < files.length; i++) {
-                    dt.items.add(files[i]);
-                }
-                fileInput.files = dt.files;
-                
-                const fileName = files[0].name;
-                uploadArea.innerHTML = `
-                    <i class="fas fa-file-audio fa-3x text-success mb-3"></i>
-                    <h4>File đã chọn: ${fileName}</h4>
-                    <p class="text-muted">Click để chọn file khác</p>
-                `;
+            if (files.length > 0) {
+                handleFile(files[0]);
             }
         });
 
-        // Form submission
-        uploadForm.addEventListener('submit', (e) => {
-            console.log('Form submitted');
-            console.log('File input files:', fileInput.files);
-            console.log('File input files length:', fileInput.files.length);
-            
-            if (!fileInput.files || fileInput.files.length === 0) {
-                e.preventDefault();
-                alert('Vui lòng chọn file audio!');
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                handleFile(file);
+            }
+        }
+
+        function handleFile(file) {
+            selectedFile = file;
+            const fileInfo = document.getElementById('fileInfo');
+            fileInfo.innerHTML = `
+                <strong>📄 File đã chọn:</strong> ${file.name}<br>
+                <strong>📊 Kích thước:</strong> ${(file.size / 1024 / 1024).toFixed(2)} MB
+            `;
+            fileInfo.classList.add('show');
+            document.getElementById('searchBtn').disabled = false;
+        }
+
+        function loadModelInfo() {
+            fetch('/model_info')
+                .then(response => response.json())
+                .then(data => {
+                    const modelInfoDiv = document.getElementById('modelInfo');
+                    if (data.success && data.model_info) {
+                        const info = data.model_info;
+                        const trainingFiles = info.training_files || [];
+                        const filesList = trainingFiles.length > 0 
+                            ? `<div style="margin-top: 15px; padding: 10px; background: white; border-radius: 5px; max-height: 150px; overflow-y: auto;">
+                                <strong>📁 Files đã train (${trainingFiles.length}):</strong><br>
+                                ${trainingFiles.slice(0, 10).map(f => `• ${f}`).join('<br>')}
+                                ${trainingFiles.length > 10 ? `<br>... và ${trainingFiles.length - 10} files khác` : ''}
+                               </div>`
+                            : '';
+                        
+                        modelInfoDiv.innerHTML = `
+                            <div class="model-info">
+                                <div class="info-item">
+                                    <div class="info-label">Trạng thái</div>
+                                    <div class="info-value" style="color: #4caf50;">✓ Đã train</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">Số samples</div>
+                                    <div class="info-value">${info.num_samples.toLocaleString()}</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">Số features</div>
+                                    <div class="info-value">${info.num_features}</div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-label">Thời gian train</div>
+                                    <div class="info-value">${new Date(info.trained_at).toLocaleString('vi-VN')}</div>
+                                </div>
+                            </div>
+                            ${filesList}
+                        `;
+                    } else {
+                        modelInfoDiv.innerHTML = `
+                            <p style="color: #f44336;">⚠️ Chưa có model. Vui lòng train model trước!</p>
+                        `;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading model info:', error);
+                });
+        }
+
+        function trainModel() {
+            const btn = document.getElementById('trainBtn');
+            btn.disabled = true;
+            btn.textContent = '⏳ Đang train...';
+
+            fetch('/train', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        showAlert('success', '✓ Đã train model thành công!');
+                        loadModelInfo();
+                    } else {
+                        showAlert('error', '✗ Lỗi: ' + data.message);
+                    }
+                    btn.disabled = false;
+                    btn.textContent = '🚀 Train Model';
+                })
+                .catch(error => {
+                    showAlert('error', '✗ Lỗi: ' + error.message);
+                    btn.disabled = false;
+                    btn.textContent = '🚀 Train Model';
+                });
+        }
+
+        function searchVoice() {
+            if (!selectedFile) {
+                showAlert('error', 'Vui lòng chọn file audio hoặc ghi âm trước!');
                 return;
             }
+
+            const formData = new FormData();
+            formData.append('file', selectedFile);
+            formData.append('k', document.getElementById('kValue').value);
+
+            document.getElementById('loading').classList.add('show');
+            document.getElementById('resultsSection').classList.remove('show');
+            document.getElementById('searchBtn').disabled = true;
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                // Kiểm tra status code trước
+                if (!response.ok) {
+                    return response.json().then(data => {
+                        throw new Error(data.message || `HTTP ${response.status}: ${response.statusText}`);
+                    });
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('loading').classList.remove('show');
+                document.getElementById('searchBtn').disabled = false;
+
+                if (data.success) {
+                    displayResults(data.results, data.filename);
+                    showAlert('success', `✓ Đã tìm thấy ${data.results.length} kết quả!`);
+                } else {
+                    showAlert('error', '✗ ' + (data.message || 'Lỗi không xác định'));
+                }
+            })
+            .catch(error => {
+                document.getElementById('loading').classList.remove('show');
+                document.getElementById('searchBtn').disabled = false;
+                console.error('Upload error:', error);
+                showAlert('error', '✗ Lỗi: ' + (error.message || 'Không thể kết nối đến server'));
+            });
+        }
+
+        function displayResults(results, filename) {
+            const resultsContent = document.getElementById('resultsContent');
+            const resultCount = document.getElementById('resultCount');
             
-            // Show loading
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang xử lý...';
-            loading.style.display = 'block';
-        });
+            resultCount.textContent = results.length;
+            
+            let html = '';
+            results.forEach(result => {
+                html += `
+                    <div class="result-item">
+                        <div class="result-rank">#${result.rank}</div>
+                        <div class="result-info">
+                            <div class="result-speaker">👤 ${result.speaker_name}</div>
+                            <div class="result-audio">📁 ${result.audio_name} | Speaker: ${result.speaker_id}</div>
+                        </div>
+                        <div class="result-similarity">
+                            <div class="similarity-value">${result.similarity}%</div>
+                            <div class="similarity-label">Độ tương tự</div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            resultsContent.innerHTML = html;
+            document.getElementById('resultsSection').classList.add('show');
+        }
+
+        function showAlert(type, message) {
+            const alert = document.getElementById('alert');
+            alert.className = `alert alert-${type} show`;
+            alert.textContent = message;
+            
+            setTimeout(() => {
+                alert.classList.remove('show');
+            }, 5000);
+        }
     </script>
 </body>
 </html>

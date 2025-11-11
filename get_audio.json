@@ -1,0 +1,1434 @@
+{
+    "dataset": "quochuy6543/audio_vietnamese",
+    "config": "default",
+    "split": "train",
+    "features": [
+      {
+        "feature_idx": 0,
+        "name": "path",
+        "type": {
+          "sampling_rate": 16000,
+          "_type": "Audio"
+        }
+      },
+      {
+        "feature_idx": 1,
+        "name": "sentence",
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      {
+        "feature_idx": 2,
+        "name": "locale",
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    ],
+    "rows": [
+      {
+        "row_idx": 0,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/0/path/audio.wav?Expires=1762701525&Signature=Jus0hxdPvX5ESljPTD93p2n~jrRkqkqorE8PXnrAFPftb4cx43VHFANTJiHYWBLmMgyWc2LJSa94bXKhTtIlN0E-8sM6L6mVioTSpFj0MU~momMjFr-CCzVp3z9lcgyrEPTv3v14aZQvFHveHWFjnjI6R1s~mnqnXmsIq7G9TvALiJiZvRrT-bQEOsC0VMHFSz5lNyTu42eFBLG21KFo0FWIVDoPDPZS5SfGBGmTJkWDqSNtAzOerk2j5Btjjy~Aq5sqYlurw~xE1Fm9eImx4rQzfZqsTVsMSwmQON10c~rysUH4QyIdBQtfmqfCvg-tHopQb9oFiuSQTYvg2WNcsA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "ạ. Dạ không ạ. Ngại quá",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 1,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/1/path/audio.wav?Expires=1762701525&Signature=wfqisoAxAalRdfggsd8Lnv-KzU~c0VJBW6b0NNFHc56kQ6j0bNbhO0mn4TYie4KL71DSFacwu5n8khKORO7QwYQVaA28DBcCtbijHdNS~yS3JzV~e1KRSzWjmGFAwfbqtIQ8eCBhVBz8WEqYv4xiIptvd8UI6-9C5bUF3BqDe9uI58BMd22hhDjufglLWOgKLO15M4wmnIwsfCVOGjDRbxhuaTuB3JBQ3YqvgtOAhSCjOMNkd4az-73fY4dE5x33pD9XlusW5UiVptwK4d3Cqtsy792IRHxpqoM3xw~TwlNDWCqDrCQ6aQVJetFPu2b1vXS5X~9S4X07iUxc1vM8Xw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Mẹ của Thảo nói",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 2,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/2/path/audio.wav?Expires=1762701525&Signature=qhArcCqr~EDTotj3R8yaA7QB9koROaQKHtRiXbRYZYmIl77w-~EhFl6YxlX6R5ei77K9IdRR~9Fl~v4nKF4c0uBUw6Q4kBEI~yCm1T08NkaOKAEkHD2M8GPUnmhoYjj9EEdFgcTRQ5iQXICfcqCoaCe0MPk3YN8X7kE1B6Zu8MqpsNlMtmgJy8ZvrczSMA8J5H6oGdw3ajuhzkFVkZ5jQTeZpJg53WhTL11EF5QiuCDF413owBsXVZ0q7zfH-tkLdRg4qeRUK~-ExHUVd5lz5e-1ued8E1xOcisALsEz9IVWvOGL3pypUeUh4P9goInzlKfCJRHLy9yNRjXvxt9BdA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Hương thu còn thoảng đâu đây bên thềm",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 3,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/3/path/audio.wav?Expires=1762701525&Signature=Ax2JlUM6NCCCuOC60wcs6MG96HFjist4nWmYcTKaCi4H0~EPL1KCC8O11ywTUXDUjRiEPyc9noagGda~W4D1Cx-qz3MGKoGD3hLIybOzYDs39r8tfa-oG-4N7cPFM2tqLbCwTeq4~2EBjnhMOa3eFuqDO42XntMUKUW6vI2PovOmnek5ld0jruxlo2u0W-5bDt57DPUH4gycBj7JYia0XV6iRveqIZ0kqdbfB4pUUb-mCe7E6v~yyYiLqr2q-TeWP1-1prH5sANObaoIpxkalt05oVXhP4Le6S3RjZ1zBNAuaa1sYpBxM2JB97He5mjGo~t232WaVsxLUZE6c8eCqw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Anh ta gật đầu",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 4,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/4/path/audio.wav?Expires=1762701525&Signature=f9tJ1dZ6qPFviZOh5ppWQJh7uc64NwzeJEAjlHeu~rJRpa1mZ2YK6WRhqW4Omu2oSznvgJnziq1XuDHElPlBDtT4e43wQye~PQYQhBw-ZPbXMLzKt7MEdOdQALgKb45bANRbJSUqWl9wvypE7uPOoyxj7lHM8GuZzXnRednD9RjQQGEfGnljJB9cAtPq55B4hRlCJX3mfdHJYK57qq1Vcdl0ysZ5SH4VgkQM2xuJk~Fx6y2rQYxdusYWT9rx80cniV1YxBr9h-2jZ3FSFfVpzIubCXg7rraDqkOPV2qCsMITinOZjr6zHHSarLwefb1exoTLTqCnq0C4-cR93Z7u2w__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "thì vẫn không hiện tượng gì tiếp tục xảy đến",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 5,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/5/path/audio.wav?Expires=1762701525&Signature=wKHmDl0ODMJ4QSes9D8uw6jDtDmom-S~WK98FavXzHqUc24pQZr1x2tqNLvBRtvjG9fbjBpiGPrKGk~6ILrg2JKvh47L7GWE~LKI2MvfoFW3j6GVMuV1IEeRS6t-MKtjExIzixT7qCR44BfTL7FsFLyyRDZQktq7a~R1ceHU8-YUorcqYcfNcYQIUDAEwErpIR~jjdMg7ogoJTgprVB9ZtMWnSBdOPLMXLfT9cGNvqZw1MQ~i3cWdu7rASkYuf9ohrqSwgWq66vHgcjG-B-yVzPm4nUIYRxdx1ToAdKwxVCFpaaU0IE750wDhS36EzEWQz70RYl60jS7gm6EEUpudA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Gió đông lạnh heo may về khắp lối.",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 6,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/6/path/audio.wav?Expires=1762701525&Signature=dFyxSvz~KW5~gkEZ6pNTg79vZQclJbA0nYfLYgbyXolOnqhkZpD8PQpytm038OgHXUStUBxBr6SBmSQiA7ttb2lktkbFU~euwVSFJ2g6cBpE9KD6sEuNYjz82unnmzfnkuoeeEZbSItgHMHlqxYseMyOwxPjKP1pz5C27vHFChZRdIm3YaMUjZhUUxxALtn~6099bZK8sPl25Zn2lQDwLEyn4QwQhxIopGitx7707liUzioDYNt618LB1wRYkrx~qpKkI0n3ovcuirPRpQaV8aAXcSUM28TcgjHO4Yo3hWgBJsZcMeqag6KaAk46sDTaNibynmqclG0EKDEOXf7hHQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Có hay chăng là con bé đó gây ra không",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 7,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/7/path/audio.wav?Expires=1762701525&Signature=NQL3ojEWoEhZ1szOymb992YRnbqGPdpmNoXL7n4gPGhO61CjW5b6-AsP6FklgCldzr~mIAzkzeOXRm~1kZgtr65XmBHSqrBxp4PDRsrZdHPkTW3osNtvVg6L-e5CT1-5sl6TpVZ8c0RWHZ-CugmanJxAnSdPp3JKEzoctr6nFFeF0xhuWXTkC11YxV7Jqt~UjlFYFiI1652qEKxvI3QuzcAGGj1jd-GLtlvxHDFJo-ANd3OfbfFSRnOWLjs6XnRMGbxjUtN2S6~i2TVgsDsjxyngoJayaoHIfTDG8pS28hxaV8x1wtqgt4qdmWmTQZtpKfrRI0kURh85oKFu-NryRw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Chút se lạnh cũng thấy lòng man mác",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 8,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/8/path/audio.wav?Expires=1762701525&Signature=W5uJXW9pnbqGZs1k6PVr7FTfXKNIZqwLSC1Z434whHaal86RtDqlrWdtiNKDHyemcdIpYni3MHRwmWynxhyWIAb7HoQLAbvOq5fizEpOb1DRxAKoBUtpt0ZAdpemLcssTpPZzA~SakiRKY08VPFR-XKhkjnerMRkewrlYrwXd9l7jImMQQEMiVai1YdpWe9qv3tMcCxJkxUcxG5EhcwM-GEeXzY85ciZ~d8KYyjvAEO-uPDl0nnlun6UD3MKH0KO4BBRBU7h1iX9cRbTcWqm4XW1UO5JNVcpuidQF~w5zIA6HEnQ54MQ2VWrfq7HC6-imzU4-QcK~yQjM2kBb8UiQQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Đi qua góc phố tháng mười",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 9,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/9/path/audio.wav?Expires=1762701525&Signature=H61m~qEQ2cobqYqr-DtMUil2r5tfGapLX9dHQinkVabRlYTfe7H3FqyucsVaD0-CU5sPoKSPMkJiBpxwHuPRCLly2hrhw0DZ-dq5CzYUpNmsOMMaS6dBW29qecj0f3gFXWuJbdyhuk9yP99fNfTllRLcKIdnqrFxGqnlHJE5BIVIyuY8UV4QqgMuXXYeKp6d1cjqDLlmd-CEbnSE4jaPIqERrNc8dcYozpI3N9lkFLLcaI5FDlEZhTCiYvqQRbJoRH0ZDEa~7R-tErrXG0~4a50FWBvS6wp~LEVocVW5mx4x89gD6CBGNR3~2n2ah6LWsZPjhjBYLj-YXeIJ33KAJQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Anh có thể dối em",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 10,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/10/path/audio.wav?Expires=1762701525&Signature=Lk5urgsdnhmqJBDxA2XTUquzYEUBTK2ETTBNbL5mLnHljcJE5iukPsGIpXN~MGgy3m1ZChZtUQkyIVy6p~9QUBTqSbgs38psFTuTqNYsUNzogs7VcoJvmbHmxgMkqoSWoR6wcl7hNwM-II5NAYWDq~XhIbx61c4Jo~DeFLxv2Sta-3Q16d~IYqjKgTDc0AHgzxRMolgRDgs~5e33wFE7XM5Qg4FCvVYysSbrPqaeMoasoitZRzyEUwexmmpxdnxFYy9tsF8AbmdoSxhZpvJIdvCpWY7lkTuXytnvOVy8m1-gN~fC0Dy1AIIH2at-fcpVGtHLXN-ymO91440z9BAKvg__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Ngày em đi cất nhẹ gót quay về",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 11,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/11/path/audio.wav?Expires=1762701525&Signature=WAc-gKl1ssty7HpwctRyVknhWnoyqmEHVb7~slfBw2yMYAM-PXCeD8elJWr-kBrBzOsWhBCHEdQsmkuv5YsIJY7c-OvAZgOu3wuzZzHqx4o625O2rHTvi0lMsFT1HHaUyIr4DEDcakiOF-NMEMHUN-CzwlZwmQDhAbZEL9Ul0zxeHgzA96j6F-hNOfmtfkZ3NP3rk-tYK6vzsyC4GsBFET2kLfjLZI2jpix24qeQG9lxVFEg7YT45PrrYm-ht~Pa2kXN6wGx89ebcKLlhxVJnDEtK5DDJoOQLvzv-DoVDpg1qdWf3DMrLvaBu7j2GktLhmGBP8uP1CleoI8lQAaLBA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Danh hiệu",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 12,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/12/path/audio.wav?Expires=1762701525&Signature=jEDWpKc-xDq~cWYYmmPSpGBuAUw5cFPzugyWq94nG88rnydp3zO2aw9YQQzgLcSiwFyq1ZpgkYEeTkfQ1FuqqVSVJDe73rjK7ymPg8j2Y8J33sSVjG2YTz0YWHPCGv2uxv6rBlkd0JMBT3rXDHkCzKtC21YAYBxtxA~tRzF1ECtF-U0m0ZJPYYoiYEw499CT-1LmK5kVQ4YvHcLjX8zGxIQ61WiFhlUrnjXT0lmc-Z0xLrx4PcyCJVVYgX2FifW-bJ02NxrtBJK3HckHpbVXvxKw2MDbH7SVZTy-af020I4vItEFOMIdWtCT37y~9lt8y4edAuwezOWdv0YpZm80XA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Anh đã biết tình kia là không thể",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 13,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/13/path/audio.wav?Expires=1762701525&Signature=NZynAqofOUiu~TdbiC8hQcWmL13rEq9-GQ3XbYgGc6wyj1ew90A2mToVCuL9pf4OVnfYca6oAgjqQYp6-2VOxOgbvHSq3jwTo8gQL4vB04s0O0zwgVHAttm2-zrHjoHBxt4MD2FuL7HZmf1MuYheg3NGWfn7gS-IF4aRIvjO6XXX-0oOAwwUTSAR-SaoUMMWnv1OyII18uJBqg4UDKhkegiLOP-yRQ7d7ppKdTHaXPcEujprbZK1dmJFvRivI2KyZWXRTkx92W0rFNexv6DsxQsY-JZ8UGIabtUnG2KfIHceoV3Xx~MC4DzO4IC3j2ZxYTK5RwJgh9oYlT2xR4mqxw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Cây cỏ tỉnh táo",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 14,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/14/path/audio.wav?Expires=1762701525&Signature=s7WulDw3q~HEb8XWlJ-n~9zjmfFnpFRT8sCVSoZciZ5atcanYRbGus~AR~IEZ9m~IV5GS8WrdLLAwrK4R7rvJEKYjsCamsSbpurwzW5WsXcAMP3EY3J-AfkCs-7jfVUzBWQlXUYjNHsGpc~FzIjb3FJPe-stSUmHRjj-OfmOHYnu75w9e5za0uDV6of-7F9Q9Qi-3Q0ohN-27H~9BeBRfPJk3pmbMMLdMHP-zkHr7exrZJpcb6~AEME~Om5mn9F5K83LcsHWCYfhyYNgIMBCFTZVxDndF~FHj8fM26DrIABE5CBGTyOnCNxnciB2C2aBgMGw7acYo-94p25xzwU2HQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "song trai ồ lên",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 15,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/15/path/audio.wav?Expires=1762701525&Signature=spa-Zcl8MLtgJZBFGII76-n4M9U~g3bmLoMuGnpFLLy1SstD7mNvAh2chm~WhJhk73J-xKilHT1QB9J9N3zA37OG-ZjIvr03GADFBJaFOvWkuCCfOG2kL4u8kISZVrUXfx5abROZbcU0DctR5CRs8HKscJadl1CVlD~vu9mLKS~kxyNQ54zr~evjImRsMdCYlQVSb-ld2KAgOgOkPLFjDHRoOC6YIBii9TKFbckWBbpKI8CeHF1tZNyBiDLkOpTw3gXUmm4f4ibQdAnK3B-6NHtl0gnWKvLq~Oi1N4nzThIJ4Y2TFs7pCWdkgmDsBPNwURp2~E0uCo579MudThMyXA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Em không trả lời",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 16,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/16/path/audio.wav?Expires=1762701525&Signature=DY8wchheGNfDw-cOZdct749xCJ0btFiaHSlxqBXLcu4XHOgGa-DD0rgSV2fpFWxv-n58NQDPbdYi6eFo9NaTG5-8Mn2yLEYozu-S3Ynfa-Brb2w8ZbnQOcUb7CR2Nk0QxS0ke~fGzE2L68dWjedDBFxsH1dBMdihk6gZREG6zUlumwm3zxzfxAzOYaYmbO8qqDde~Mi8O7CnleQxO5WXWrH3uoQf9J7lw7euVH28LFGkl1kHmYsP0ZKCu6JKIRqc6ODfvAef7S53inW1w8AoMlSu4owQIbq8WWQq4rUl4s64IH2JVSVnliu3lPf8Ov~5w93QAxwe4zUH9TG8tq8YRw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Vàng thêm nắng ấm một trời xuyến xao",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 17,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/17/path/audio.wav?Expires=1762701525&Signature=nPtL1x4~w8YNh7JG9iKlVgMC1s6GIQ555gt-T-obrsRgoVrW52b2r2SfUlMzL~CbMiK6gwjBkpEm9aObjofpd-O4-d2z4SdMPpFrdABdXGtEkciV~UwiC2B6uWB9G0Nv9wQvrqkwAwrkkICaupb0pLVgpX06M49hCEHf27xESyhkrDErCXdIVh98x~C58GFYnGFByufvd4goKZz0s3Gr770mKQNtK1DWnbqa43QFb-Pub6Wt2vUwwT7XjfymgaEGw3BCY4iRcqsbADv5QLggzWzH9y~UKqPe2il-H~3Ow0Bn0FaXksVFp6sQKZld2Sw-kloP2ViUhqV3hfbiiwXKBQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Yêu loài hoa và một thời khờ dại",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 18,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/18/path/audio.wav?Expires=1762701525&Signature=i-cnV5HW--M4LeRsh~dXHhAwVdC1VR0fAOnUIS0RDeH21XwUX3yu5Hj9j9Hk-YIxNLgF1GNg0TBYYEav29OkIyS8RENiv87jCyt2JIk2wblevtDTbzkgtF~lf9n-GpXOFXzL~gXu-pk3t1Z5mTTsVpSABsBIW5Mge-lLMGJDxRpPcziUcJkmTPv48nm1ftA2Fu8pAAWGV-FcN4KJmA5FWWsVqfdB2ZtLEu02Md9a8K3MRakRRF1hE0H1VcjZeezdP7TaD0BnRvhZ5kFqlj7CaK1LLivRLaFPAffoo7fgEkBB2lM8aqbNH9i41Fv9CIfKFRuBSWZcGhe3Png45cktBA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Mà lần nào cũng thấy bó hoa dã quỳ nằm bên cạnh",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 19,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/19/path/audio.wav?Expires=1762701525&Signature=UDhRhxqi-rXBAPaVKjtyO1ryXiki316t8TCGdMFMVYcUHRAE3WFul-xPN7lNmbdumosSY-BDkd9rfyTHWkeYqsbyCX4X~fCWPMsxH3-fGmv-UkYUFdzkKNWl6yzbFjrXWjfl~FZ3o3DioT4PybMNCIDlLQtOvqiLQ1F5zEalHi~wHc0f~hvOsr710qvDYijmJtbSK7T0bPnqF0tm9UEM8MEX5JU8Yr-9ex3IgG1GnCcqNkU7cTmVF9tHCkGK7rxO8hCUyAZVV1Q5KV4qSNhyi5ImNtMBYmTNFTSmDXxqninn~51TclRkwvSNq7A7yq2RIvCVzqiVc6Sz1RFDCwSq1Q__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Vừa muốn nói thì lại thừ người ra",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 20,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/20/path/audio.wav?Expires=1762701525&Signature=p~MRuJHzd7ZeTWuypa9exI2Bw~udff8PCJUKbGPcZRax9e~tHFOd5GyjCWVkrPwEs7B~Vhq3mISSnu68FP-V8igEGOfc5GdDEeDZue~0E-HqF-fQPPxvgqb9eRSGPHNVWGkfmRpruLkdkzd6D14MY20nNmOBeJ~K~uPqnkF19ycXOdCukTDsXFHtDglDMpRbXaHViSxnHwuMrmCcJY46CZ-w72WvOX~D8aXAHoVvV9M-HYqNaHr2IeHUvyYvrnrQkrV4-u8x9IYWgxoRgwwB0g0-nrVKkeMZWJJfQPt2d79YddVBGCUr~L~49IFgbik6lPrqIiR3yS2bRUWNL~1YTg__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Nếu nhà có phúc",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 21,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/21/path/audio.wav?Expires=1762701525&Signature=b5-rBWsoygeSuFN33d7cPtyPwUQWue6Gop5z92P7iuBJOFn2D8oUR5cD27CMMAQdEA6H4jDqZKAZgUGFZR3KzhlR5TOiH1QHTAANV5-~4Z9in5sSdGsadZ~XAETwJAK1BCS8xKp3MGL~a6lbN2AnPVRIznwOQ5jru0KACCwkJnEx2zc~BPZeY0mFa05A3gUHAU8T6MBQM79XMhWWtcUrGMR6hMHrjWsdbwvElX647gzjq1YyPn3lWTv1zp5QTBlMkneT3p~QUiISR5KcxDd314u635o37V6tvBfdo7Cgzwg9fAi0DNUQ15t4DULAcXEnTfgW8y2YfO39O1tsJz7Taw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Bà bói liền đáp lại",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 22,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/22/path/audio.wav?Expires=1762701525&Signature=CViV-mJO8wnirKCWLOClKN4ChhHP68Gp97AIi6ExW2P9ea7heeioanrzEcgG0pIGWlCXCED8Tyc4cXK0gNfcB5QFZ9a7aEk9r8EZ2qKuj5EHgN0th29SVudLn4o-2HhxcXRWEw-jWeAm5RGQgFZc5A-V7zJFk3NM-K1kQ9WBnQuUCJ0-9IE71EmmLJ~tX2HZAHYRhTrZHJ0fkYqA~4dX379I1DHbKw1E6WeRxBwE77sJPx782XY7JSrY6UMU7gttWwnilg3BIpl~no0G1nO5CN8KtUUlxzcjOCIs7oQTVIwoz~jZDVRBV4JqC5~4Dnsaafe-bDM9868bvr5XZyZHvw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Trong mơ màng anh thấy nhớ em hơn",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 23,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/23/path/audio.wav?Expires=1762701525&Signature=f3Xl5fc~ReIwt-5utW8OLp-v6T8yzdq4QekwQmpZIDQwvNUGTeBsVNmw-NtgLMaHYAgOZhTz-mh~Jzy5HvFaznaMKeZ8HbrVsRd-A2jv8732fbdWUZDPT0ioHSmBLaRAAcbCC8F4hECXypa~zM0yf9~252AhA294Qw5aLepGScpI18SSp~fC88XEsAdjUjfPtep-IFPGM1I7wHACBWMypWP1-dS25w78yGdpsjdy2FbviWV~vFI5U1a10KaQVPPCpUY7Olq65G4QiqMS6mf2qR0ei-XaTmRkrdA331035~2LW74VsTpo0g5x23NHU5QZ6Bd7cuuOa0XV4Rvd-7HRJg__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Tháng mười một chiếc khăn như bóng rợp",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 24,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/24/path/audio.wav?Expires=1762701525&Signature=qV7XwSZJ7ICtmHTU02aEh0G~1qck5Ss2mwrvmATwl1q523t6L1rRYLxrh5tyaUrxdfArqXzPO5O3LW1FO3dqCG-yuwQ7-EN8KRzWrLsLRaGdi6cPyE8Bo581wlZnYgC9zhjjjkYsxtSLqxQ1wcZ2DDMTa5~fjY16iy7g9UsBHuie57mkz0yaFsdMy161USwe15DHXKi5NUJSDTt0Sp5PHPHDFzf~FYZF6cBEAGb6YSLXpno~XJvwXyvDwhogmuLuoX~-POkWY1XRV4QhqeiwBY6huAVoKhtAbuO~vXaHNN5XJlo1mL611Dsj57lMH2sBOv9RrJM9fAHm0f-WI8vtYA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Ra đến chỗ để xe thì Phương chép miệng",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 25,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/25/path/audio.wav?Expires=1762701525&Signature=CP9OsTu06b0XfpJe5mrnMN2biBmUacz8OEiggAEhuN7kk6wDkVxl-6-1nwDOHcbnWA-gWJmWgqD-I0JOiV6RNdicWx32KbqKO7UbEskp2sR8AleJSft50iD41nJ7LZYnfIzCC70p~-EQPdPT~m-j-nfhfL09J5x7k8gZOq3vB37o1WuSIlwF0p8c~gmR~dT08fIkfZAM8W0MaUqOE8uhE0flDPzXsNjwZLXDELp86y4~SQRZGCf0efRYTRf8ZOppjFMxPxmZeulF4GV8D7rnOrbuHl0uU4Y6Hw~j0iqSewoQPiqRziHrUpRWHMn~dIYqZnbMhLUruF9DFzagzgSQmw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Tô thắm sắc cho vườn hoa sống động",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 26,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/26/path/audio.wav?Expires=1762701525&Signature=yL7~MYjH3JITo5SXpWEMTkbBD0DyGyXNi5mRrl9GwU0iRX22EtvGBFfLOmsMm~k2s1lFLiL9Tddt3-R3PP075UcMo8UaNW1pYEJbHi1eWqfZb9L34~55ip5skFyLPYVma8YdETv-AfXtyn-kT0salidA-jgbtdUcJZaSO8FbaJprA7vO5KiyFGQXMik~8SmoTy3mz-5JCn~KoZR9vgi8QfiTgFUL8Jvu1f2mkxctFPfSbNKp-nfAQkD2oUiEdCicZdnsieXBQAeXYUX3NQEtAA1Nz5hPPoOOwPecIg7~-qce9pF9mapcT0ZCUyYop5lQRit7XPGOdxg5TCS0DTjMxQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Tháng mười rồi, đêm sẽ bỗng dài hơn?",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 27,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/27/path/audio.wav?Expires=1762701525&Signature=zx8vtWtT5UxRyzx0r9R0yh2-4otA4kZJIRPx9TSVRlFWbygKfYQynoo2n0cyHKpUSz-t3dIcy2UsHEeaC9~wVh-Olu7qAVNoJHCvKxvhz851JiGJa9Y~TzudWnqB-f9Jf-Ze0hFPC9tCl2xKodc2D~~wY57LQP26QHTTplPXoI4ajKO6Uw5YamOI4qSbHSgV1FUvWPaeB-0zsp8py2k93-RjgU65mPcvwiRnhkyfZYt7Sl8XQHg8AJ9pT7aQFaZElasX8AU4hxwcSHi7Hsn~QtqJl2gss8IuZzsd9WToCoJdqEj8nAeXRDtRzRbY-XUktt2CryrxmIRMdkOWHqYAuw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "được đặt ở khắp mọi miền Việt Nam",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 28,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/28/path/audio.wav?Expires=1762701525&Signature=GY31~jZ8WT6VMbflCf0aa6X00O~Hy~wSb7cs2zQ~v60MaWnsObz7Lf~5OhZUrLhRcn2Is3OaILnP8XxvdWvJZtI0Q9SEisVhwqbzQtFPcWUpIMhpTUP9-7S0JdU8Lqc55APVD2gtjROuzI246qYvWrBMIPu1zvYlxdS2lx5vgJsxoqnv8AIGOSXvOL9A5W3nvUL7g6fVV11l~V3Hk-LlesJ8-x9UDcyJR3sCnMtau-c4gjWQKFlP1zeOk~axIJREKApEIrh6ErHl3PCvEp6puPCPMgRKBZexT2pFOahyv45ohwB4147Ue13G2KANJ2Z6Ijj6CIKBPglNiVysr0cu3w__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Trên những con đường hối hả",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 29,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/29/path/audio.wav?Expires=1762701525&Signature=oOEIDTryFG-7P2w2E2X54Xbi27FyIjzpWAvJYPytR-5iA~VRomYHX5-kEzR5ksq2qoCs4h3UmFQ20RonZ2RVouhTbCbouQ8qZxWbt9VsGPDx5S0jrhPk-sdHNe~B38egVeDhoG3OYiwpVyeI8f6WYSrlYW8z8kasfPLkKarhtT3oHTB7DC9mNaXwYuNbbizgztHT1oG3lRlRjFcS8LO68sz6~fQO9jthv-aSHaloqycf2lWvCdd93fr7TRgkQl1nyMeP6yMsPI0GVcx43GxSHKYzhJt04gcZjJTsofGwGH3U5cHKyUurX1e3GKmqP391lybMvbgiQGTUakd8LNt09Q__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Vô tư trong những buồn tênh",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 30,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/30/path/audio.wav?Expires=1762701525&Signature=D5-rYJuygwSJ61G6GLjpvy47mSzZZtun6cD-VNujM0ynxFqCi~BqgyF46C36Q4DnidLm3lgz0KZAsfQFp5ySteb4UGP7CyJI0FcIB-3kj6ri3R-wLmDlKyt1Uc9jFJgjKZPjxEPj-vS1-ub-IxVDmHyYCvq4gakmW0qN97oKgb-ToCuyKu7uLI9dcstN-ec55DLNxID65q-~qsfXY8Y5WD-eKx0zZNe8TaR0bOTLQD4AwSU3-390ATkJ1UBSrDR9KmO65gcPRcFtru3eIw8wWtzSI3FotemQz25qlvmBpXaUSlvdMjCGtbMu2uTR2YS~M~OadCTrU~XEufZjHq~48Q__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Vẫn tiếc nuối những ngày thu tràn nắng",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 31,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/31/path/audio.wav?Expires=1762701525&Signature=AA8o4D1sknxvdyuGb46zna2n44iMxJHWn3M1DNyOkilBStk8PQploOdUK4dUHqeNdXtH-tQL7jcV1LsRz9coH1UWoRKUbb-Ft0s7QXNkALqtqx7jCnHKQB7gCCkL24TDBhjkMrh-1HjH9E2f4ZlZsQSus1EVPdJpl6XVhksdkCVW~ePiA7v7~7Z32Pd4XVmSrhgxa1zy2nnDplOYwcelgDmDT2L1KCd3LK91qv84eI3TUHtjP2qQwgFP5QW6EBVNNdVap8yyGqK-v1B7I~3uOt6nWcnGboSOAKXsDHR3CIX~RdTg1okGSf0vjof0iNdtgloLcY9yXpHdqH6UO3cNqA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Không heo may cũng chẳng cúc rợp chiều",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 32,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/32/path/audio.wav?Expires=1762701525&Signature=G8MN27ProJcb61N8mZcmiPe68Wdhy~GvEYMtCYbukpV~a8URfF75EcO7T3d6nRYe6FxxNtaFvTLRpR-4O9uOscZRCGb1XzUxqgf-heDJiqlBSZ3r~n2U~oXeBO82MIOYfM7T3xDE~gROFvNmhzwncjX03U-GSQ5qlRzsW2ynDia7UsV7M9ZVuYlcndzxvej8mmJC9uQ~-~Ku6FcHt4vKXt8N4XQTPzFYdf4PWeQs-sDZVnbh9j7RlML~CGHv6gUdCO~MtDs-dPqeilZ7kQENgyMWv5BH59V6AG~2WuQixE~~D6MxhVcJG09-iQOGGVj2ANmtJE~yL8rKpRTSoAOJdw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "mẹ đi xem từ bà tê đến soi tiền chỉ tay viết chữ",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 33,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/33/path/audio.wav?Expires=1762701525&Signature=v6tmqF-r8lnN7QvkobNBKhMedNvPSbvn9do28b2GL6k9cHFl6tXEIMAKx7VG1wl50XHkMQr2~UKHRcXaVd~j2IUoaLCyle6c0zP0XBNM1oiKj6FVq1qc8b5vDUhsiCaoTYKV0rsz6EnuF43aUbu7Mz5kf6tS5D1ypCVIAsV1gR~o9qrBn2aMTmB9Img50qoyuBPw7hDeY2Ay7ZVINEeZFJz7RscUUHmMrpUE-ob3LlF5cItcPvW5EkvJO36yY1SakUvpUfRur5ZBO8xqWjxQ1HPYe7~j4KaAMXzu2P5omX9q1dSewYFsjTLSmOoBuNHGWAQQ4Ms-0snsCbKq35kmJw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Nói chạ chạ lát lát bơ bị người ta đánh",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 34,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/34/path/audio.wav?Expires=1762701525&Signature=LLNx09IYJmffITef5eESfAeH8o-XQ6WKq4Ib09HQjZmWnDl3bJ3a1lFVXhno89pAfV2afdfcFs1ib8tW01gKu9XbPT1hYt6QxI6SqgqaBk-la6hCWdfVIe96VHqf5-JWdX4fC6MKW9jg6eR13XDv~RNS4VrWXq7ChiQ6GlwXNzPMTq9UnIo4y5tKRbxwKRdcsDmIl29URJofMd0S5AdyMlh9eOxfEVyOXdhAY5OcJKrVhHQ1sr9POJBrz1t1U68JBHf-hE58kWJ0XDSQA5hYYe92HYweZK6sf-Gpkz0dDTxo0kee7TtCiqT8-sS1qVZZJcTE1rhC-UrL9hvAraVe7Q__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Van xin mà chẳng biết là xin là ai",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 35,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/35/path/audio.wav?Expires=1762701525&Signature=rQdJIgMAhWTUAoNQaXwNubipBjIvub4FF9rlCL-3GibLX4NSjQsfqjGvdayiAtGnmgoC0m7ZVT0czd~5p5EnCaNgLwx9ckdPRV4Z4fVR3WvGd0hicOsl4csrBV-vHXsHrlr5oiuw9-GzMpjLWFV~fipE5BKzV3KE5kHEbCCobV2EytM6b8SXeX-93~6E0ukN~KOm8KM58eUFIXacflxkl6~eJpLg2XxTjypyXUO8-8Dpt4qpkzWTuIa0Cqvu4DAyaIq-Aub-qynY5H0NdwVb~VDoUqK4rn9sGd~jKJV-c33RGMjhS3Nrmj4jerZhB0thodH2OSHylT-c4QCnLTLGOg__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Gió hãi hùng giật rú từng cơn",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 36,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/36/path/audio.wav?Expires=1762701525&Signature=uyRtTp6Y8lzASAQC6~jXnpgBnErOki3U7HMqaS5zL7cn5jxyC-vOt5~Gw25N4KXtjVEM5AxOo1ZtbsThdNFKxNFlD-cEt09we9JdjUnd-Vmr5hj~Esq~hb9rJ3B0nozx2ZjpvzNKj063g0MB3ATVL~1E0PtJkJnS1e88VzziF0ieWIdvxRXgS4P1lnTqXs5bJxXrIn5JZC5px2cObGsl2o6fw9neYKROCDU78fA9Os-cZa9pUvz89bLEbHFg0-gBOtsOGFADn2vYg9uSKlZPbaL-SYLo2R~H7FYMjcQ2Ymy27O0O5OG272U6MXvizpsAMGoHumF-1hNxa115kaZ7ZA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Để sớm mai sương giăng mành thổn thức",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 37,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/37/path/audio.wav?Expires=1762701525&Signature=BkoKp26zvJICVYavOZejEwGQEYohoURTBi-eMfTiD9T2hhmrcBC~TweUnFXlCvGIGWCNQbSj-CqDPdcPFG2p5kESyn6HF1~F7GGkYKCipUS85RD1ZZdVTL1N8JTYL723watRkqc9QTWbnZTTCM-Nrb0xbbwPhTq2mX9IzLG3VTRov8pgPcnxYebIdHuo-q9r7dBsSa8hHJPlcphP-cMppkv5aqBWzOQcKx2mKzrbwFV2fVCMdNhAOYdv7852t5TXVnvsFpWSEP7OVwWPyNY4JltJIYwDKurxaK8P373ovTFqT7XR1tgUSMdcUgsqQq78dg4rrGU07rk4Mw-4sAaB3g__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Hiện tượng bên trong phòng quá trình đã thay đổi hoàn toàn",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 38,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/38/path/audio.wav?Expires=1762701525&Signature=dDCXzC9oQ~W6jW7NGO6t2eyuY-XboJ7iSyaQ9j~rhJ4YJBOL3jYFtzuw6Er3B2uWx2hB2irr03Dq4y9mh8oj-ygwGlMeigtFYe2CVr0ZhI0L4RsHRLosdyZWXpjEp1VqL2ppSfDQEPiP4yO1QcEZUt5gpWyEzafw5jG~aDuSoOCZAh6m3~27OMQzj2qKQbRYaPc-RXXCcgKPbIGdd1PXsryn-siE2sfYcpB2WROX1Yg7aY1U~1SRsxywNIVLa9vkEOnBGCcARaJ2f2P7YOKm4gxpPkzYh5oKIhVOFuFXkD7lNSXstljbPc5nV2WGfiyG2lLQh~~e5BuW8gUV4AGibg__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Na ngoan của mẹ",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 39,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/39/path/audio.wav?Expires=1762701525&Signature=Z5qxzCjdFq1uwUQ4Sz~IWQdVkxNgxr3y8O4--7lrgaOe3GF0Re3LD4gK76e62dW-gbJ6sKcNVreRWKxzoMPPwGBcUZ7xQzsM1y7FG~K6GWcmfyuKVMQ6TyVVO1AxW~ZEsAH6NC36cJuljWaqDR4UTdgSgeMZnxhtEBI8KZDwJ7ujCYD~02t0kHikP88Yhow9hbgt-g6YdkgYmB0RoxckGzH8zvcftUI5kWxLXNtKaIx1BudqL5FKnvnL71qSafe6XZCBMB7yAqF1FZmXe7cKVZZWvw2wDqY6ATqL4h0Ch~XANGsMMQJWt8fBZGDd2WiBWZZ-6T1KtgFrsWn8cPUNTg__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Nhưng anh chàng đã kịp phóng qua hàng rào",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 40,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/40/path/audio.wav?Expires=1762701525&Signature=rVjdlYOihmLzMObo5VdkhOUf-2r3JlkGmFuAwUrptUQUjoAGJFUGchiZ-H1hYbjMMxTnM1uWR-Wv~JOzbFOkPEPmevIOSo2l~uhUuLpdMtABvz4rryn5bBrkaZowOYztbKhTp2MDYTkIGj45DIC5Fod~M9obPeWNRLljXF94bvZangegT3J6LeOKcA6bpfac~hDYs83XZdG0-bM84pqa16iq-ZOmLXShn0Gq~6dem-UWkOUyL5O9hDcyre6QMTetAr5P00j0F3CGlSkxkTEYQ63zmfxZ6r6HYslnxML0K3A15hXLs0zYeLezhtU7u6Xi1Kg0w~~5ONUGQnGO048kpQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Tháng Mười, em đến thật rồi",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 41,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/41/path/audio.wav?Expires=1762701525&Signature=s2RfCr0GHOWjcvkAuOLN5anshUprlD9K5oc~R54qXRADofeYM-uUms2gTpAkajPwqTxoBPnnx2a9Q61IT3U2PeY1UL5wusbT6Uf9XiY0xky1wJE7Rk4FZF~7zuEO6BXooWu-OtJTGXpmDwPNwwzWhmpe5y4ZtxB79VMxLAvqK-VVQ5NcruB78jigSlcYxDcOxaJLBoQiprbpML0MMdxX906bKQ-9HME3X8AQwZ0Ct46U8I2knmKhj4~TJe6wuNIx8~sQ1RvUAzrr1wALKjXw6OYO-rvxk53ho9cqy4bNudtc7x9xuIUyFAN91xqZAjQCkT64tLJYt3tnLv1WtjJFRQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Dắt tay em, bước bên thềm hạnh phúc!",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 42,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/42/path/audio.wav?Expires=1762701525&Signature=Ef2PflXyxTfeuxthng-rR7a611~SfJ0n3fN8uTfjthDixyguUxfQ5Zd9~OKaRgmNHX9a~j04eIo8KcfFE2v23~C30w~rF1KiS05r25mKjYbPMUtyBaJZ-mZI7I6rO9wtVTx1l95xfEKJw--otMLYlmsGn~W-F3-q-V8avjLdyD0Vd3SSc3h9yZ7srOphndFLgaNRQsWratKB1ImYYhYHF57UhYV8k-YQmeV9VJzi0YYckn8-JCZMPVgIYcSAdiB~QY5-2ur~rra-zfPx6B1edzFqmUPXy8pRLMrJfQuMUbmxN28Lfw4tgYW3tUsZixGLJucJNkmnt1hKdjDktlEQAw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Để cho thương nhớ thật nhiều",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 43,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/43/path/audio.wav?Expires=1762701525&Signature=TVThu8cctQm2oJdmeIzGv0n-BHqgpEnPB237KgwDs2TsdqbkREVAcZwD5v3NEw4UD8~lQKV8h3~8Q43LQTPOVup2YwTA3kwzaEb5Yxai8YJldh0mTwMDchd3X1L73DiATHlDjDndWQdHrs1UFG977PSkomF9c6Hv4xIyZ5WEk~D0vV1yiK0Wi1INuialOGHcwaghFHsXInYBCJRsfFXIYzaEhfl72RNlU3CDdKDfBMQcvHYB~sUg7uKH54Yconm0Y7wyU~w9kRYd~MZ49Q4bMQlXJlg4KX3Ef~861TthMrlKq5xqdWOQNsD1JqFYqf6BzLhkTj8wMgF7IzYPvZN0wA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Con quỷ không biết nói",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 44,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/44/path/audio.wav?Expires=1762701525&Signature=n-FhJD3SVBDSMHWB752XldHF56WArtPV3adB5W7n0pscKt4KGhuPSPyy-jLRwzYKN1Bkc822lcTSg3RTxwxk4hA~EpCkQv50Gg5ZK4AZdUgdX5YJ0OcY5AmDycG2IJY9MqovP6tqv6HFv9UiZIVXuVxAolh-mw2i4K9rils1jk5brIWpSPAYB5YQU96P5B4YrzqWlvvY5G0LmG2zNtSRnz6EyXzqACR5OXTI8eO4gDG06~TMcxXgxN09uJrn2uhFsPRZU7EW3Ft73ElcpZYIFjBk73OUyoMKvrCVK23w328pfIqreMmWaoF711blRP-i6L2id3jfYCaqZklBllfhfA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Tiếng rơi quay quắt rã rời",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 45,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/45/path/audio.wav?Expires=1762701525&Signature=st78eRJg7soHxKEMvQ5IJ6WWyiG6LD8SDQc3VI2i6KsUOqRqpK1qaKAPeOKLAqA2ukzzhrhlj5lzadskqX4egLj9GFEvXDvRPRTczw8Xc80gnNkKk5rpn~VWafyDFdfFS4ZX5rdG8csjIZBJNZh6gVZ71L2zTNe9h6QBry-Ye3Z2TjWl-iwcdqItHQW1rINJTzcvfgpYbSG0Dro1yrv6FxrYRsVVeD1NMwCEs67-MQoHUkUdFGi-RxlIIkYnFfcEk4YQk3z9I2LKyCF31Qc5YoR8Hvxce2v4MD9GV3R3kIUyDKi1jirNev-GUc8NlH5954IHFDOpgTRE7yZL1xMkxQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "mẹ nghĩ chúng ta nên nghe và tìm cách giải quyết",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 46,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/46/path/audio.wav?Expires=1762701525&Signature=UbZaGPofPkV6epyKmEhe3-q8jI3tBcURQjvszio4z3pj87w5VKo397b4mXjg4HvS4zEMXb~9aIoNfM74D5Aq~IrCD~NYe4GJCQiSRB2ZOG~5a~YquU1DB-zIShVC2ecMt1UEGkBv6IO7h-DH-TS1CylPXaSK8wGLGn~QMYTU5gaFOVHmjC5qulg4byhBFFCVfcJd4~ism1qm48qVc1JfsVEH6KS~mEIdZhZneBY31YmYdDwA02RiVLvDPJgcx4E7yUOnGMeCCZAO-~rI31ee7K2RKU77cDagjxCDJpnzKTkhKE9GG7q6hnNaUhHfk6S8FPsY0kNbgAkzgcHElDgTNQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Trên thảm cỏ mấy hạt còn chưa nở",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 47,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/47/path/audio.wav?Expires=1762701525&Signature=KNph~FyFprR5YgMQ1YUw6HRLzMdZnZDs0D5EwVv1BN6M27F18AB2DZ2IIMotahCIRFIyukWW1PuABPNJ-g3RXtc0dZShx6f78Wtm-IObAq7lFt21HW-E0OtIz38D2AYpet~siUoQfZ5ePJ0dZvTovDLLeWKzUXVSTqEqInzi0BCSFvb~LoSAhLG7BBjSfxblsIAt0wqlsloK8JTHRd7zuN3pnkrXJmvl80xr1b67btcAb43l61QPJ0OtlJbASN8xawK-6uiESAqNn1FbfIV0DTYdhkV2tUZNI6-Jjcn4KESvqr4e9gsHh~2oTlLXe4zi6MQbJFNRylB2XFRs33nP6A__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Phải về quán nằm nghỉ lúc nào khỏe thì đi",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 48,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/48/path/audio.wav?Expires=1762701525&Signature=UhOBm8ErefMcXHLkaQJMS1zHOBPp5M4Gzuxzge5WfTXmcEE4UbRCFrk9PmL4rlXQ3kLRB4HbI6N8xv-7FaS6mR1O5~VAbmeh2EA9SvV8aDqDG8fGE5FNeDMjbb7IzFrda34wDcGUDYLOer9OqGIKLMpli~teU4Zmwqtij8YOAnvTBcqqu9z9gF9sFkEGZYh8KeCAVHYXCmIvXImJ2FOAz~8ILVUx~gFzZeq16B92IV5Q4YM230Zkvc838eB-Anspa9ks9nwOpKaVb9a7NhFF30cO9Vognuu206XImrPIL1WO-kMMRg~af2Ew7gqR82BOSTxZfmGAcrIiigFwZG7R6w__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Thảo cố hết sức đạp vào người của em để ra ngoài",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 49,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/49/path/audio.wav?Expires=1762701525&Signature=uU-6p5oCnQAqDY-2MbdVy0rr3x9h~g32OxxzS0tlx7ENAIBuJAG2y-utFOy~aY4SBrK268vx-nd6i1SDIO0MVaiDOwjABxGgFkVkj~r9bFk41GJjvyJydvNht8sF-U40tac03Ff~ayZIkUkvLNS9qS10xd3Sgxju0XUx0eLz5ubqDJOlaL1ONIX0ZCwDqNAc~pEATiC7oC6l8dbbha6PRrjwgezXlqTugZmybu9WZaUeVChdF24q16vXw~ivZeQmI70jk0O3rOuccdPLCEidFiH743O1mUCX~8DYr7Eu3MUjlKBiop3YOCcqr0NUTU2thFpFoCf6VVtEKW6~1vp~Ng__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "kẻ khờ khạo",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 50,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/50/path/audio.wav?Expires=1762701525&Signature=ih~jlgWrX6qbqPTotqCuTIFdXlrwsZAusWKMet1icK23Dnlv8w9uV2TI3PzqJzeExQBaS61Sj~AP~W3mrA9zSnhQdoNZARoAyZeBxtDFJ6POSX-eewLuGDrw~kxiq0c102pgsKSBuGPtYmwJhoiOIzng5h~5HcCpWLFcf9un0npOgT43DjhSJMWXHBwh61aaE-Hm13ZDL1cTnYgpj5e6T1HNExqAFRUOPl6DRkgWDhPhWemFPBp~brG6Bh-bwFP6C1xiDABj9Ytva2nJf7nyYM32~4FMiLyFWjZmSlJftVr~Y1svZuOLzn6z7o-JqkfWpo1AEa4TpoCu2zLQkIVs5g__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "mẹ em làm việc",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 51,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/51/path/audio.wav?Expires=1762701525&Signature=m3Ix77v50ARvfQHvt7fWvua1lIhqZS64ZOaTL-k1Ggaf-AT~kPswMIAjkad3S43xl0bF26HY2Z0FkXQ3dAbAh7HARJ39rKYLewUcqTi2tX0COA-ZYtvIh48u74PPwB8MDDbwUTgcWFOoErm-e0TgptY1k0DnACmUDx1SJjOb0vvCOh2C41UqUOryVF57Sn131Jd7bQRBtnzwg9AK26N7hdLzIIbYN6PfFYTK2jTZbuwx0x~S1GTXWNALjWdJ8aTz6fktPKE8NWNClGZtFByWP3zJaFTKA1leUZ56b8NT3GPr3ftPS3d1dNfIndhe0wEYzhRbJ8jd3pUWp6aXqiQqAg__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Gửi theo gió đến ai nơi xa ấy.",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 52,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/52/path/audio.wav?Expires=1762701525&Signature=EhJDBP3H8OtjMIW-tBN9HrVIZQgvVyThzzWtLO0EEoDf9AdAgAYh6-arXqOUdRYz6-580kBSCnJsKVqg787ChFieeMDVDY4DO--uHzAzzwNmZrMIjGarEkpsODSDqL0WqEO4GEfUnqDGtXnR-ia9JpZxnkf~HiQd14NFFl0GGQftowUlOcdi7pT01Ma87cRY6thJvHaJE2LlxFz6UhS2iCvfFt9Lek5zydJR6MPNSzHkI6PAXBKlHlLH9MfoJ0qyo5auuAZ8AvKKjNKx2~n-LCRJux0CDzecuOo49yzz1by7QfoCmgvmylnWlce43N1x8w5kPmnJ5oOwy9MloCxALg__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Nợ em chỉ một lời yêu chưa tròn",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 53,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/53/path/audio.wav?Expires=1762701525&Signature=cAmJ0rEJX1Mmho8afSiB2ynONbINeFeQAXGpzi79Stmdwckb-z4GHTRlwSzrDQNe1iITYRLPqloMYd2GdRe3Bn0f1I7PEXH4FBEtuHYnQ2GlkRktZeEJbV1v-s1BhZwnk3H6vO28zMu4rv~cGM7AMaBoqK0R-hfrltDmZI-LWfvn1I-YiuaJvmIJBTc~FyjMkFwoeIHKUzgwG0aaYqxLGZph-m73Lf1jmlp1FLlqgppC8da21Evj8nRI7uTEjYvvR64UDZT2KFuf6e9ntCxnRC9UQNC1ejizti-Ccg0QxE1dAh2P1-pxIjh3bR8IBf1kEtEBDfS53SD-EosLi3~SPg__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Cơm nó áo ấm",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 54,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/54/path/audio.wav?Expires=1762701525&Signature=zMhEEofUT-8XcKINZ0ycTiiR1c9OTy7Evex3HYK1uxJsYUYLSrBuzFTKUzqg-NDjoysY358fRX9XxGsxMXAf2Q3qKb0dAoxTG2PxB1tlExx9UYBeGmq5LlZx~N1D9E6UbNUZ-2-4HAM5F8~htyI64vRacvLup7W671hc3k1Fw6R1tqgB9y4itkFhI1vVsPbmI28dyiiUypener92yNDNVSdHZ9EFK6TwUuDJOF~GZedBG0kMcgCxuCE~zrz1Pq~8mvYEbISUyCWu9x4c4zCqhXzLdbmv229lx3MX7qmsDakW1MHRi0Nalj~fCnjWKCc74iRwMpnQHYExkfZHyE7B7w__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Sao anh vội về ngay?",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 55,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/55/path/audio.wav?Expires=1762701525&Signature=doeGjsk6zRgxkfJUg6hR5NDNJUqRjMuYAWSIeAgkJx4njRVNjor3fuxJHq4NxHq~p9FolGWXoy5mkGwc7lOg8Jpc2lGNq10JgJrcDY5ihNEuQrp3Ju8BCK-ImqDarjVO6SIDuCy~VoVLEcKqXPMSFF6wqFuUkJqRX~oGAT8bHowrk1JLHT5rH1V8iGi8yMBUhi5nnHiGyXkJChDGTDjvY3fnrjUR3Oo0oP0TqdSCWrvWoUB3485prG-noAlmzY-3GNKESatsQ9tnf7g2Fr5U~6POeXTDXWJHBUD3SdeW5zbtCviJG8KBl2s8r3adsnR9HJgg~l-TKgoyF8lne~wuww__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "thì Người đàn ông này liền lên tiếng",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 56,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/56/path/audio.wav?Expires=1762701525&Signature=kc1JS~fAL5mBu~5bbO7zdYGzm7QOWGecL03-mrfgF9rmHJjRpeB6jPLr~kCyRs5LryR1HyKDyEgjK1xwkGPtU2T9yqxVb8nasUMOndzf6KIQ4RESK1MB2axlVkv~BDiP2CzRYNxR65pO808axCJ1RRkiYd1Qplijlz1u-kaqaIEjhLL3drEDdS5tstz0EiEnKsN4-I-Ld4-x2oucts4hIPmUv4h6DuJRiG4PWjf2xnXOOTIDaPB3KYuEhEerdMcT-XigpUH9VOTI8cYpbTmHIX501T6HPefLbkPbu~DRRk3fa4KzESiAtq5gg5WcnLF4LzHgqeX5VA0SK5V9VH~ACQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Con của tao Ngoan hiền lắm dễ thương biết nghe lời",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 57,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/57/path/audio.wav?Expires=1762701525&Signature=zpYFBx85bbxeSfMb53yFszicYKfzaKFG~ltZN7NMDRnJyIu3ejhjsr8zi47uXdoOTrit4-pSHl4jr6QkxDNSy1A6mPvt9l4RQW-~AHgLpGYCNfvbkIlSReIM1zSQG3ZTJ-HlzE3duMzNq~OlpDZdsMNKB6dwwnU0aAEn4ikSyuWtS9e6SmCwsd9Xs6dpqY7woBKNOdo8pZWGEqG02Hv3I9lc~NaOthFT2RZ1B~9wY01w17rmDS41yhC4kNzIA2Om95GToY5jOjJPBVrkwaVG9hc8QAgW7Z6~lYSEG6yvddQZ61GKgPQVEzElNG4hS6Fg6LBPZUtTfA~NaAt2pEd~8Q__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Mày lại mơ à",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 58,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/58/path/audio.wav?Expires=1762701525&Signature=ZJIozvz7uezCMTpBXol8AXkYtNKaUz-mJOR72LJ~b9XPQJQlVKMP-4o31gJZpXJiv8n-GczBqCTwOj3IaFxfDQUNDgEZAwq-7b2gMEaBMtYgvwi8NGfGVHtJlYXcLbkLBSVpEw1ovIZaz7Cg3p4hDjrmb5ZvAnXjvx708VTF3liKCtHHckxsRlAbxAJKloCssRtKsGgromesxXIcL8-Cjb6kF9N3ERRxuL9zs9gFfKazdK8z2N37~yxLG-bbps2oCIEeZ-3Er7bKDobM9xlRchu2glHQY8BRwq3OjpOwgMTUu8Ugfu-ZC5iG4QVPjweLlp7LpKcCBJVKn-jSQSPVEw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Tháng mười ơi gieo vui cơn gió lộng",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 59,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/59/path/audio.wav?Expires=1762701525&Signature=KejMZQe1-m~xSzMBcUv4csafyI36QHrzsUpqUFctGqp2ftLCXJF-Fv4u7IE04y8ZMk0cnRiBqKi5tNYgRDV92yCO1o521vtB72R7opRBBBmjlS8NYoyjPk0zxzf954SMc1EbCCB8Jkz9Apy4RBrqt4E~EHcXnz3N9DLaRcLTcg-YoSCuwiKwy59nVlZuItkdtAKcDC8Z9UTu-Zo9sftA7zF0HVXK1nRjFlz-iurl0dfd03FGliRGzSZnRQsOX3txWbp~RwZjdDnP1r3N85Eb4RHtv1Y1tP1pZlGJV8wjDTOGfF41SnK4k7-zNsjWzwLCh8p0YoEjk5zGAGK6unQtEw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Khẽ thì thầm trao nụ hôn ngây dại",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 60,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/60/path/audio.wav?Expires=1762701525&Signature=IUwmF1fr5wtPcLHCBYpb-TmpAzO5KFtypbb-J9nvhvrd6ey0Twn50dIcBkFVurrJGSzKlGsiY4F4HYrm84gc~NRT0Q57bpT~VVRqlmwqEXScHPiuez4fG1~yaVafaRPM2A2w4PlumPHr~RvXuLb9Bn8tw3KWygiPvHhBxY2SndlnbcdELrNt6NNXSDaN9ji9QTyb1SYWrBdErxA-OvvFKrIAx01-0dq3XOIpw1mckRQNXpVIDNcwI5bPuQOQYR2cKoQzqT2YSTnbAx5qoou7doemYZicQv5k3ECQVh1PnZE-hm3wH3W1av1KjDdlav~TQsb2yODan-mUv~YqHi3mPw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Chỉ cần mày với tao vẫn làm bạn là được",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 61,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/61/path/audio.wav?Expires=1762701525&Signature=MAvLHFptrx4Mbo2ABedvtiah~14-zbqzueNPlbbcO2tfffcXeV6KOXxEl-NMxeN01ctsA~kDsGMeTEULROLAxxtlbir1Vt1F~Gnwtf1jRVVMW22ykivBhM6eaj8rvG8ysoG1EJuh58ENPUSR0iLs3hSnN6knwo~lhAeDKO3eJLPhJThpYOTnoJouvWhZ0cqUycGkAfXP4kwzYR09VrnDdKRlIOuau7H~KpFp57an5zH~FvEJP6rjz1F1wG8LBsd7iF35VmZTjnedGKjIdJGgY7dzte0wbSOUVv09z5DG9uW9V6GHyN1GQRanHv4yri6XW47-dA2PKMQjE1NiQrhpjw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Cỏ lật theo chiều mây",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 62,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/62/path/audio.wav?Expires=1762701525&Signature=ganCbP-hPAFeNN4w3WrQahEewx7XzcOByDUwvT2VMn-Q2wl3P8dk5ulF-QUPmHeL5hkghdfzioKxDtgWR~fheyuwnlpqoxe6NsVAmTgs6Eoy4RxOb6~wPcFQrecXEOM1JQ7WczYwznQ4M8uhv-9t1wPNRWi-nLcpZL6FS3mGIWMmqxpM47uXoPDYaUccfoyIuzPGoXoVbbQ3mt4-nY~FXUZR6XzmkaslMjUcXJff5oj6UYmxwXME2Zk9lkgrJ897AvkzPTZ5JFaa4JKsM~npT9cAr9T5CNWG3x9EDhtL3-uGhqG-fOfrJNuRRlZd~JwYs6rwRCQvRj983sYRsPypWw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Vợ tôi cũng bị một chiếc xe như vậy",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 63,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/63/path/audio.wav?Expires=1762701525&Signature=Ibo050NuNev8Km4KL-W9rs5KByDlosL34h7ZEHiRV1WQK9DYlD886Gb5czpuPpd95sb-foesbEfKTLtJUPMwSkjVfRHmfvYuaHiTdrzPcAq4UQNwk5sBaZLGyZmC44mV3S-wwR9gKW7XIzo1YxdZJk0k~z7WTh~odXWpl-8TmBvgHiBFZv-6qcc2tnTSI-XI6OvofdD4G2AhB2v2WNbXJnkwG-3iaxowLaDCVN15RQrXfBnAQG7bfC5-Ga70NJ-nHth9oZuCm-2tPa9h4owXfO1z23seTqDiSSTetvc-HkOr0SjGNERd0~3dbgxripqhs3Y1PBficjtiz-y5MUm7nw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Cảm nhận về bài thơ Độc Tiểu Thanh kí",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 64,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/64/path/audio.wav?Expires=1762701525&Signature=mhgglJcyXu8UlJ8bOpThX2Ao7Wi99lTkVekaBVNxNhv42D1pLlRkqcASWYubRkwyx4L78~TkyzwVU-AHDF2YJjsRV-a~lOM9~UPtsrrzDACfjurEXWdemU4lJs-2LTmuztnF6VJBhDn8Jpb8IdbJEpkDc6DKfAv827hegeG3y2nPg0Lp4gXQw-LKoOK9ZmNpXJBvnqp8WnI5Njs0GcA0znyqs-uC6pmez2Js3jsWFcL4m0qbrHYYiHhMLvTjvLmfTit4Mz-o964SKmq4G~a-7Uv5kREJosTdAopxLqsTn~lU4xjBC3r~U987T0WCC8UobkM1ERd9pJ-0aA1oIsvl3w__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Thì cố học cho xong",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 65,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/65/path/audio.wav?Expires=1762701525&Signature=ePuvgtqs9hywzqdJ79rTexr-1oIeLRZ0Y3bizedc3jwbqCWw2rbePeD5fFbwgZ1SEBNi~j7akzUVPx-FwHvkX5UxuF7vrdxou019BMZpzswCtJeHmxfLGQraBJEhMe0ZL~4EizIP3xbqqvW0sTOULYa~1Nt~MVaOfaBXgFJ~mn9Vs1jbe8pqOtcyHgvFub5CZgKkqkmw-PUx77pMSJy9r8FZAzpt-JqJacRjzwCPYhX08p3MS1zw4IUu-jZPpKqgPyyX7nO6k43wkxliGrwdcOreoT~TX71grjjQFH8~tTA~PxP7OzhLCuK85VJ84N2IOF0wEPBfah2xynRSNARnow__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Nghe bà ấy nói mà Cả nhà em đều sợ hãi",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 66,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/66/path/audio.wav?Expires=1762701525&Signature=s614Y0ARiiSXd4C2UNt~z3iukcLDNe4QoTia6etvDxy90p1FHLHg4KwpWL6ZC33LrDGw94SGMbZrOfEObqHOCY3hhnVL4QQ2fwEZQ5Hiki4BP6YbYn6E3i~S5kTlDDYBCx7Brf9vpLX6FUUDqLuFOQTEas4IcMCTUxUuK4s~8jTKzkvJP7SO-PTAtxFvd5vmq9gtV~~fazA2j0htCSUwfDifF-4SjTRJTrhlfWKR1CB39kNkJRqSDZz5ThOWkzQFJYSfS270n9i9Rg9ccTSfIjcYaKp2XuVsZoLeJZrrfrdWmuqn6aVYH2dxRLYl3NmqGrHNdwn3Hr1dRPLJrCtckw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Tháng mười về tôi lại nhớ người ta",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 67,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/67/path/audio.wav?Expires=1762701525&Signature=CBFG46jWopnn~B9bB0AoyNLHMeGJ71bL~KY4A4xUl27ltNFhqSHmUK0z76g-t4fkW8xZyAu-Mjc7clSE021h9GrmOL80yC-O-QoY5kJAzip7Tsw5FpPC7O5JKgRaOV2UP5HB~GVRZUkaJVHCmuPxWiZYs16UDqgDwbJM0kzlpLTn68eRT00manEwUVECVsHFWZ5OOp6gNkJgOLAcKPotz-V-3-rXbPMAwOieGdacoyx7oYqidD01Ct5mw-lpOjc7tRmi1y4Z92gOwp3A4-YuhXe2MBuT1ky~aL9sXDNaQ5bjg3HmNkHX9YsRYMzHltpw7Kebild88TMklDYngclmDQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Nhớ mẹ làm sao",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 68,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/68/path/audio.wav?Expires=1762701525&Signature=BWwUEQM05Gk3lVidMn1wbVtCANSAsNQJJOrjy3HB6ER1xvTECw2VTkxNmXUDB~RsxA7LRcgbONQcRD5A5Cx0w~0Puc~XjSnxosMsyRvj96Hrt7y78a3aKmye5YK9QBaNDiSAKV40gOQxpneZu1OOtg8Ng11ZdwqI5d53taeSmpKalOM8iNVp3oxWtPdsZkRgTEnJZkJhhcd6vpcce5oD5wNzpraaxbEPM6GhBOOd1cg1s-ToN8sU2epeifyldC3NMYoA2UUPwJG~5EeCw37ENPffVfNAIMJ1H3OENauPC64yYeHZKSvUsOVMJNB1QAqlFOdXFEnVTLLORQSRnZObTQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Chết người rồi",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 69,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/69/path/audio.wav?Expires=1762701525&Signature=U3IHMQhJH3n2mB70NAqwjGQDHDrwQ5cwSQrSEcRA3097bARnVJ7wrkXcwUCQZ31QCB5is8J4oE2bHY5tYLvz8KS9wnbEghLDRlwO9pUsD~nPs4LC0isYTi9UxMFH0bTg4icFNYOYmj-EGN1dPT8tDxjGHe13bU9j54rMSze-YRwT1OWarCBAbVXD319cLexDilYcQhiQRvw4TMu0H9To-3FOOJS0dFNCg0wYDKahn3uEmByO3CNSNMZqSwjVwnKF-jBcp0E~RD8gZ3HUfjYsr4C80FiHq2wUgIpBbEA4kfEkDHYRC~NP-2Hhl3dDaZ3WCyyLRVshzK-4mosPBfUp6g__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Nồng nàn hoa sữa giữa bầu trời đêm",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 70,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/70/path/audio.wav?Expires=1762701525&Signature=xBHQkupI5guZmRIdudh6yaCLrt3Mzi47TTf5qd~pgtt1ujEEFyUzYOLf4e1lO8GL0FMsjlXWpHpYVM9jBM2nzlUsuYfA8JrXaR5nr2IHCYi37kfS95-cuiNKGmmek9YDxNM-GCEuEX8W-dq-VZgqyfFf20R-OCxFxEnSUwmLwYUW8IJKiTGI4HsYhnsm5lgO9hW8aVNchE3Fb19gXc8jRyEzOOff6OwjIWp6fIceDmGeZt74QYVbfRghOFxXl4qHkqC-NTRdj-jDUNqSJf~5D2LDIbM2r3p5DQ7BCqUO9wiMN2pBt0X35e6K7cu-VpST3wMLNrJ6CmzFlolcW952zw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Trời tháng mười e ấp những vì sao",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 71,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/71/path/audio.wav?Expires=1762701525&Signature=vrHKFQ7pVK9gVkea69E0aH221QwE~z8U7bLphIbrau9u87tw29mVjlB~ROBohmyAVV0cMAZe-SuBCWytLmJ5tAslfnoFJNtEQiluJ0QzGPgvW~RqCsyFgWl96iwK1OYk11unaeHblWUGPSGs8DiM2XL3fPKPUCMr7DAvGLFQp9OpTWXrouK8LbZqzgWCI~P7FZox2xSBd9f-SD2g8iuXqwYSP6l649ZydiQMgdAE7jKA-LRgvHwROrlVnRylXVZ2ObZYzZogmYgoxoU-jEDSsCF6U3NQjdVC2ZJcB~ZTiE~w2YpLg~T37QByrHMUhKDnmglNCu1C0LoDNi2xKK7sQQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Chúng mình nguyện ước....",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 72,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/72/path/audio.wav?Expires=1762701525&Signature=SYWNLc20V5JMHNHuHdaOP1lRSH~JKNxx2AteDRNRtqlZmU~AhDeJ-2hBiyNZhYnZxIbw4bEJApaIipSqRqZZfQ3PKhQosw3GohvIsi1GgozLu0jpX7JX~4Kkrij2V47UeK3ONE00GGh28j51~DCiAlf8n85JLQ6Eg-Rbm8~x8GInVWyjFoBG~f3mm8Jvu8TR5GYaZSssUokYS5SpOLWHnshmInlOjCwevAWyJ6pwr~sZPazf0eB1u4DwsrIm0gxnjrVZHbTO-rdeXDPxFjZSf0s3IUqIlSxWsIhidpLcbd8yLA9AAiypIfB0m~tSAClX0N8wmJ669n0ItCfMSINJtg__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "bà dân tộc đi đâu cả tháng trời hôm nay lại xuất hiện",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 73,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/73/path/audio.wav?Expires=1762701525&Signature=QQpZzHu485pWU7A6uE5u7sz8EoZtJFq5i13myjsMHHNUHFBZYtYVSVKJKS5Hd8ypjtehGQwbwj9hCxQOADHLT-QTXzbj8p3V~NLz~PmEfeU95y86Q4b~Q1iIJ6ek~lZuso57uRfIPQgqUYDgOtqUWZPMlL4jIiG9b~LSwQtQfxq6QtoTDJpMPhBJCaFISC~1BcCI2sjqeMnUxX6OBhyRu0QhEFSypa4rfGbUVmgcLFHpTrCm2Cqkp-ib9QMWzCo7XhBPIMY9J9dxG0VHI30XnW9AkX22FWqOXrbXQqGVozeHi7BTCigzGuZk5WyFifJg06h3B1ARAd-fRWmknrTTQg__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "nó luôn khao khát Quyền Lực",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 74,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/74/path/audio.wav?Expires=1762701525&Signature=xepY5tEc~yS8rP26YRLnMATeqCKf47Tr9s4FIQflavDy3Lw37MxDyhSgJVc0aX14GqVoKAdRdZ3tUy5NSsz1mdSxdEUjAODIdEZuN6s1HvXw3c9PqBtg3yHfkOxbUKBtWb7KbRY4Q2JQqUMnLKbZBYfiMpaxoGAv5rAfQJeysfuhaxSDlDNpSpB4S-ldfT-SemYx~avZ0W9M8q0XjNMu~4LnipxdCfTmt~u426yPvnCrI3ckQWWFinasmdlaRrnEMi3xWZFfck0DXTU4kyiRmIEhO-iqOhg9vCBspIKouynBPhGEjGeZsk8~yGe97qr9sGOEeEniC1WkPsJbWbiEPQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Khỉ cánh cửa đóng lại",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 75,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/75/path/audio.wav?Expires=1762701525&Signature=stKXL2ZFIMMbWT3avWAPCyB46MiNlSXwLulaAuquvmY8HerzVjQ9E2M-tWcCc2hwkOBMONNjfpKHg6e6a~~LiNJSoTrfcQGzs6ucjANykmNG6SZ1vtfuxya6fmebOG3AdSzCRftpXxFyouRpz4MCnUv3-a7iBVlzuLE6demTwOrulKc24SLCElDIsfZ59e~t2GrdUuJuAzbkTTd00LqXerpDIeoy1H0lpQJJtJcWQ9nl1HxCVDL-Q04oeqr8pBKNbRcHVqcU1m3146p5zB2AdVLEBqIS8JtkoiehJvC-BDOw97ltRWMgzlV5sLo9OACB0qvfRXT5xDM99I19bvK-Ww__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Đám kia thì về nhả tiếp khách",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 76,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/76/path/audio.wav?Expires=1762701525&Signature=DVMuqzCRqdj311PTZmYqcfzFxXPbrRv~9cs3PFUyjkOcclrDI9ULvMRJVYhmHHDkM04wMJfBl179K4neUnG~WwXfe4bkrVJclgVrJk7aX8ObepKmDDrExN~G0PntjsyOu42lnWg2CU9ol2uzEtDq29R7UWPzk3WFvd2vLAEq3M6wjZP8U~O5m6aI6pvw8eIBSj3uR56eRT~V3x~BltZtF3GOG-bxWpKi7fPEGH5K4yinLh9bSzQyvI-LkQgSN2RwcFBJeCvVFEm3ob4C6jI2~jTpqNlHVt5XD-jqtzYJIvfnPZbkIkbrsbMqrDwiTWfY28cOet0nWYENnGnczV7fQw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "bố liền nói",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 77,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/77/path/audio.wav?Expires=1762701525&Signature=RQ85bZntLivASKtj7iEBN7zpT20Vs9iFlP2Oa8AVTXyiL2SiT3cnf8WkHWqwC43dSd6Uw~qhyvMEM7cR6Gg~A1lR9tOd6oEL9WnoJWmBNr-GzuhPLF3UexTnqfp9-snnjcdN2W8sWcGavIHRVSFbG9aUetqNk7r48GVYyezD42p2jr8uvr7vylBm0B-KfWmUwKGEZZ7~xhsxwmOA7owSs1BQtTp~5E35i86IAT94XklF5OLpdWtLQZ0EIBpoXj7IjPZwppw1~wn8jmOtpg-lAgGaUR6z~0uvfig7qtY6kq42gL2R7y7alMiIUV8A2yRdIkZYCO5XNFXOz09HiVO17A__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Các bình chọn của Tuần báo Time",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 78,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/78/path/audio.wav?Expires=1762701525&Signature=dzYKPczz-9fJBtQYRaixrwLL2iKdFpFa38cO--TIlk0Agow2OQ9Wdrv4lhCSX~sBggRYCjRBXWTUidlC8LlzRpd4PvwX6UEyKD1So1~CCe1aMo7POsiDo1EsgxpE6JC5Thhj79VDe-RpwrbQaatabKJojksb8QfnJ9NquVqBuZZ6mZeLGegc6EREW2RounNKf8HNaljvMA3~D3yCGHBfYyKjruc8KZr-3dmIE9n8H-oQ~r4Ej6HqhhVUpgJK0nDaX7aR3Av3aAQ1p6FPkUpxUCz1qpieCY-HcPqSEOND0oidIi3XmfRvU0c365j8YAAl16iA~yvuY~2UUt~4gmlJSA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Thôn e ri a ở đâu",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 79,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/79/path/audio.wav?Expires=1762701525&Signature=jvnz1TyFEU6CpZ1A~mOmplAKUeFgtWzsa3EX1NlYiiUx3gChseAzx45oYmWFyTfgwK9bjcfY1h~KhW1VkqMhxD~Mrpy3PsoK2ziSvxbv52lWfu~oBa3KdVHsSJMFDct4Qf09IjPg1yo8XP9ap2Anb1ebJMBQCCm0YCvMwZnRcedY-yELxqimv3T0sw8qCaOVOxc0XYLM60-DtW16FNaqhnKI6DL-PlY40hALWfmbAXc1MG1SP2ywQdBA5vinZMyzAiv2W~1jSW30sq-ZqN-kBg1J~PE~5Ko-Y9YHPIk8yeGErwsQyfoWIFbAp688x9tcN36Yo98oVWyjYnghnzBh9g__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Đặt bát cháo ở lên bàn Quân liền hỏi",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 80,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/80/path/audio.wav?Expires=1762701525&Signature=GVnwuHScgqDH7bc7K9qBYybYIpCWdEkYULnMvWXqxj8evKj3NGHATsAIZ512~5owF1hMBGxX9gkszDavg6fYBEpfnQyCL2Nk9ZV3IGKfm5DhTbMdTEn1JU2WLRq64L9IIhbfqXx4S6miR5PkrZK8xuH4AQR8EHa-qwMan2G-jLvib713~mldC1Jz58iFJc84HhhA5jl3XWdtvpCwyfU8~~EBUMWhEEHYNuPnxVZLWoDEYHZCOzMu2qoq9NTGugxm7eJ1UU7rs4XU3WddBZzATI4OXCkD0xH6N73koficqvI~952-wZtI0UldgfcWlW7gtOIAMm6YL6ZGZ5ZHKd~IKw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Từng chút từng chút một",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 81,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/81/path/audio.wav?Expires=1762701525&Signature=FqQCKkEYh4ROrEJqEAQf~iHD7zipe9tqB8mhwvLi4~V-enC8PLzx-laGIu8h7xEiON~b9-aWWUNlI5Zut6JtnMnqLbXTBLkeljgotzmg2yYSpchU9~Z3ems2htPJN-G9BoWcQK-db2NdkYTtOXAuAGfre-W8NiVsscO5fkXQirD5KBKU9WEVoJFmMCn1h7Gqf6--vdi7j9UK6K5kiQ-XXsR3a1bOx2R5KPSbxs-ic2wBxqYAFAhxicTn4t4Hu6MbC5XBJUApCG1AZcBzUvYo51GjdBRo9KuT09a00eTU51NEYRDCWe9Vk9aaUCAfpfmU2K~SBJ6EtJaDuDrZHmz4hw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Sao mày không có về nhà",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 82,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/82/path/audio.wav?Expires=1762701525&Signature=Gr5ZCk42tcdY9R1ue9EexGunNcCCp7fqtztaAM9gA4YqIerPzFSnSF6J1ednvtrPaNHAJ-36UPX2kLpQAhzVmdnI3qJZ8TquziiP~S~QbDfEQnfUHI2kCuHO70TGkFMmo6PKdwhnXt5rGC0S50BxFvQTVtcJAZuJIn96Mv-JSWLsEXnvh095Izx-t1xVzPkJ19AfzqP54sPh813yyq8eUv27rS0osL9jNE~A0qcofzbIFy4MtdtYS9vzHyx0dbmTr5YyyoURZnclUFLKj-PVjeBrbjgR9TXvRTBlwtljSh2RJQT9edjhXpx1i5asuaP~sUk-lnAdhI2eBAUYRp-jow__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Lúc Tỉnh dậy đã là sáng ngày hôm sau",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 83,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/83/path/audio.wav?Expires=1762701525&Signature=U6SFj2rdElay8aMZ95QWEpZ63E2Z7Ynvv4DgsQGDLY7sN5AVjV0OpE2bw06gdxIMOkMR3yVRFIfiNfZHsbcL~DuG6-BgWNpbi2NiaBqbSVL3O9IBjNh6~js2SqWaVJ0VCa8kbbRDWykj2GqyNlIUH2XPR63Rvjdbw505Ubl3OvV2tETm~1Q8f7e1Yc89gahhwU2bXOmuNBceGL34dFZK1QaYp0XipD44z1ikN6o-bAmoD4Fa~9xpf8fiyhNowc8vbZLQBbxMBNjn-rqUVyCh8FkfB3CPCaEz1ujFkG3NmM1-WdZzPMbbAK~I4tU9Kh3ad7wEjLyynPTzrCfHrLy-WA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Đợi tháng mười rơi nhẹ xuống lòng sân",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 84,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/84/path/audio.wav?Expires=1762701525&Signature=j7nS9f3Ro78txJCXXTkieyEB3elDBHC~Zbj~-KOdy9oK1~MqutwNtTjoaPf5~NCmXSWFhJouJc2WlhA72PcT1ru2jKI~Jbt28xOFWf3gqMrB9HN5MS4n~EpVQecfFQ6ynopcLzxvI-gGHCfXKLC2xpcFJQomBpkjQ43MXlvFcm-YrKXK0G9eIRisOEG~a4AQKXHAy4On5diMfxTNjbtUsJUPemyXzLl13h8tnFAlAct53n2HZ2gv898Mvs-ZHDnuMQkTNqfb-ElcAnVsqEVZEHzeufpVsSZdk-sF2oRgTOiui7YWSVV0c7yITC3CbS3t~sa69vzTMAXkcLhhTGcYdg__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Khe khẽ",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 85,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/85/path/audio.wav?Expires=1762701525&Signature=j-hKV63yslSrA2XPxdt0RdGz~U468g-lGXcpoBtFwvfFrk7GDTQPThDSJF-~b1qRcqqrY2GIVKc7Ko982IXSut1zZ9By-uS0-dhmvwuX6CnpsZpPiQLwNox6r9KjZqhA-FHsF0zrcL~1F3xxgs~51yGuEToBSJtOWyKZd28QReVBEVKBwwVQD8bcQCej1ZVy4JHx-wnw~ne3oDhHxxwQyn3TJRBgESekzQgKHh4tS8tg4Y8l7Zn97KpEgJwKU1dxTvPdWsEqVLm-h4LmppruyWkf86ORqcnzOGEiQQmtyrGousRSyYM7qwAxn6cEC6bTeyBkkMDGmV~lo-cznaM18g__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Vợ tôi cũng bị một chiếc xe như vậy",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 86,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/86/path/audio.wav?Expires=1762701525&Signature=noxRnuiChRyT4GR9cuTvJFJ0X~VsZsw9CDZNGS8QNf1Tz~lkigc50BKKPEj0~yKfP4yEcD00ErlbWzy40GAdMA1CGNSpnjIQu8eGyey533wrlcwEn3-VotSgmhjDBCrDneCbNMdN5pfZT89nqoIRomB8R2aR1DTXHpLplVF8Kgfbl7UHcl4jOzYeQH-36F7LurmhAAgvM1-3yh0WspNtAYKQJ6viGJ-t1X0GCgDOYVhKXsHknckwmVr20KxzNy9rtYyl2~f78Z3fxyCdH3vdW0-WJtiY0IWXVVT00QRWyufWkmtRwvLmm5rIXdm5DsTZSVi0hFLGjSK7jzGxAoEVjQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Chinh thay váy ngủ rồi đi sang phòng thờ",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 87,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/87/path/audio.wav?Expires=1762701525&Signature=viCw7ve0JYvRI~hVHFmT00Wk5dC53yuSWUI8SvTMJhesYC9zQ68XD4vhFh7JcVZEMd8EMa6tqIeTk5P9JzmAxMIyJChvoNOMRRgnjbfhZXDaqyoTna6tL0KLZFVcX2eaStKeXrVl8zYwmtahjtF0qEIeCO5KFK~aBqU-zU4bGgp5B8BE7-g9RZoXDDZFVURC7FZ4Ej1FzM2iSApNTKpor9BXHUx~xbm3hsNYUDPEVzUMFMweJA~BXpknmQZ8ov8o1jQgjaXBGbi9g0eZu8Hsi3kxgK84TgODscBYPxv~q2i3PCLzhxcmSkeKBlOXAQ~TBMzrl6H2nHkCaAwvjVsIyw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "những gì em đòi",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 88,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/88/path/audio.wav?Expires=1762701525&Signature=GrPGFLkdQI6CLWEEnGQ7lILjRKm7NG8eZIhDKEzAvwUGEvcbE3FkPD98NLX-Ts2fbNIOkPGp3N7YoOI35e8DDxNkt0GYdn4AaxhdkzsLBQ4jJK9~GGuEtcBOoHEbOhINyIQ5Oz5sI6CPnrolXZQ0WPpQjeaBcDLEQFjH~bW951DhfV9RnN-BNhJJvbxGmxanTJKbHnNyL1toVfBaNaVHX3Yl0V0vXR4PuVN7i2aPXhD8Zppe6YZ3sbOfTPMDIUkIK4xuSBTIAvFjFju4sv1z-GdYoZTxxQp6BJHDrjIZtAJafe5RJ1avRAaW9a42rgnrf8Nn99QCr2HIq8IcVza3Eg__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Hơi thở càng ngày càng gấp gáp",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 89,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/89/path/audio.wav?Expires=1762701525&Signature=EElgP7rql2Y0L0p4PBPhcfi5JXhF9bKkzIW97Y8GRj-CUEDtdKVdGGMRK9~0dGf2b41coGMyl2Trhojse2WQCY8tO1inT8RQQIgA1YKYeAPWfBUM6gtNpclhU1NHlNhYxPm~HJzQmP8UHBTd9MHbfMeqxUoAYahUL1JEHsBVI7c7MBslDrmwVzZv2qwaKsY6bj~02BnDe6OlAuJdtZY4ptM-f4~lAdt0fWTJPO8~cevo0pEyinMTDfYaiZKfLOpNqavC7wRZN8T9xXNj0yp2K0B4VdwicDY-Xivtn0BauIpnAXCUogvolACeEHfwXJfGSu27z1GUGh1wizOa6fkrAA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Lòng mẹ bao la",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 90,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/90/path/audio.wav?Expires=1762701525&Signature=s6tNDqgmYQBCw7t7qHsmcJFwSO6HXuGyMlxWnftODj4O5fXCkiRXCcX~luh7LuIunljqvnyvHLypgQtZKkH~5MfDx5n-Qng2xnykCzcPltTzO2sdbz4ds1iZDDfaaOKA93GVZcvxhGSg50BbG5kW8fo9t80ikHGAfY4cpXjNE9e22fry8LooC7GN0y2QfpRJWxq3~YTfHXdgOcNJMzDVFN1RQncczS2NzV23SGI8~yzsEAWK~IB1ueTCqFCPV7mMfmcOaxgzcWnAGHWVi6ErhlHTLNwtS8WGLSuR4kQimV3384XmI16TA9gSzilWpLdArsxyJXcNoV90aFkkcW7CcQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Dở dang hoài, dang dở, dở dang thôi",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 91,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/91/path/audio.wav?Expires=1762701525&Signature=fYgeZkXcEDGLzZMXDXGoWE7e--NX~cAx7DQvMXvWPn7Gu-vXtz26oWLyUTiwK1gw2qZG8uBVJ41ToqYj5gpi9o7vEU2U-pKhH9WEu8PrDzQeMIP5eZGALOkeQaQemYnz4UWS~iVe6NsUnu3BXONyxDiVsSRng5hrO4myjXB9i6Zn2PKnUtF3LvAxS8UjFyyN66tGs-VVd0EjjVZdjerVF6biYNhCGFIcuaJ17kwOu-Co4nTNbmDNsxHiaeF-dySqsMXRiwiqv51YXyei0UHni6IhbXFaRId-viWW1q8IjlEKdRrNh5CjkFXnA3MHeaBuHiQsXH8abKCl5TK8ttoxgw__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Ôi tình yêu và kẻ đời viễn xứ",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 92,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/92/path/audio.wav?Expires=1762701525&Signature=T6odxsfSS~2yS0VQq9o83G4G-ELoSRSe9bWIZblS1BPnGaQJhWeHAuxX~Ryflb2h91eY3x9lNL6njYudGs4cr9Jih5U0eeFb9x~5bWuSZnfJLzvRvGntvFbWdx6vR8MhUMiHyipUv85a5bNCHbPijNneSy8ZVSIdMFMvLTodqdVxSZmZnItWxX~mUnC19ASm1r0x6CaEqi~1tDzLrkxGkehan3jK0OzKmjjxvFiYlbQtgrKvpX3NkcS18TFcPTugAAS6CvKwI9xGPGTuKvX~WfT8TELBW574N6tow4PPyJoavpUUBIZdqBSqNGlFCbDgTFragdDaxNeTY41~mKn55g__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Vỡ trên chuỗi nhớ sợi đong đưa buồn",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 93,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/93/path/audio.wav?Expires=1762701525&Signature=xntrCb4kFUQRyCRxLzAAtv1J4Q4hB1oZ0gq4pTdoNdwrJCARvs7pN8TXvmoB5Q~d-0MTqSw84BtL6sGAcUIPcKRNm3mjmAl7Dicp9ombp6T9w7jMc0yAZjLArE8Q-3Pnd98kbBZ82V0ucENfVP7pFBE1WS4cTd8hXILWkSEZ4xA-LrQIQ7osIvLycjwcE2LPh74dyjNNsgaAVFjcWcP6Hc94Qqr3q~QWgVfg6jFPWe2bbI5ncVibQfOEmVf57SMZrSQp9Wiro83AUhqWn082T7k1izJZJtZ~au~u91bPHajWKgS-s-GFzZ4ajQKVvhKzdjEAMfo9kIESBiADGoqOag__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Như là gói cả mùi hương đất trời",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 94,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/94/path/audio.wav?Expires=1762701525&Signature=wTC0J59V5pHc-qvCyF8npcirc9hDaCaQAga-8LcsynBFtKYZgeBh2CT1QpRZ00bqkMSDvytUHxPCoO5I4iUeETZsbfHruDPEuUv~PM5X66i7VtsKIvqyYn9-EdzIunpddbcRCXKIKDuqL6OAoG55DeUmrW-KhAlA5039euSgB8Zt5SuhH54FmP9MBRiGFsQ3oiVSM9SXDDWX23NBwQqi95U2TzEr8D6OhWtbiEwR-7CIUa9gS0rkPNqtMf3sbJmD53iQo3u6oGWDjyZem17hIToSusSWc8JxLqpyk8Eb6Z74YOC7MzFk4J-YjKGLX43m-NM-Q6LCKT1fMwV0pnzz9w__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Yên tâm tao sẽ giúp mày",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 95,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/95/path/audio.wav?Expires=1762701525&Signature=Vilc4RrBKuAAllBcWRKfTuvA3KZoz-k23QQO1IDGhKywohadIzqZ7ihxBSSb1j6oTxXikHzGtqta6OoejFppVC2o~tgc497ab9~zK~kVTqwZ3SxlhlT3b3nHOqwH9Se0iS84-FBMXbGQ-nuPb57kPCpWpbBOubjRkL9zViL93w4ddsTyUoGk7TVuCPcywffo-VHHU0lOFNe0ygcTr-Txx0p0ZVNWtWL-2ctmq8p~0TLQWIjqiDCoQGdOgl8FvxNP2w77uRutAqhjLhE0rVMLAjdo-i7buqLBoBcb4~ve10bA9EqE9C8-nXLCOZIQ46cMKJs~yYgLZDGyGLC-Wu1dQg__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Chẳng hiểu trinh đang nhìn cái gì trên đùi",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 96,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/96/path/audio.wav?Expires=1762701525&Signature=nx~6eEb6HoPkw4UAEoekufLsznAIjEaDOBw3ePOcdKTSx86ZFkXm4SGWQdGCjUMDA0X8uKxl9q8krHWnjA5b8OxiH5oGXm9Y7-uVBeejxg~6Un7H-U6fgnNcsn-VyNjQXwOUu~5ThkdLqdGZNJwNnJuA-xGQbZ9gczELYRXvQ-BBK9cnY3S6ScxOkjWJ2BXr6EMF05G778aFGj7TvLV2YoHmG0mlZgd5Ta2oWFxS8URvPQy-QalS5NVIIF6gQ2RYs5Zwl1zo9ilS1DtLdRxGL~OExeXlf56yJoR0XN9K5EwP1Z8T7AlWqFlTILCfknYX57N-Ri5h5wFbE~Eg-mJ7~g__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Cùng bạn đùa vui.",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 97,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/97/path/audio.wav?Expires=1762701525&Signature=LoGipFzVEw7n-U~ELYTgbggywuEsk2r9imW6p~F157Z1UZ5vPZ8jcBXf0pH3Khfj0AqDwxYuyR-2~TlcL37KInDeJDBnveYC3HkzMKk3sxzoQAGqMBxYnbMFiPsxqIYnpTaBUDBdlK7dX~PRItnx1zEI26f4vZTTiIOHch-rb3TBxZDSGpkHhYJ38WAqf2YAQ3y3iYtBruhIV~OUrk5wM75FqrYnJJYGDxX8GYlpjq5~Wjd6NBvqyg9xUzQf9ORTF7PUppKqOJexoLY4r2JUT5ZM51cWLW9xd-mH6xXm~NUXbIwrcgTsJUmAQz585esP~5AvWBYL2vVa3zRPDrJyBA__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Vô tình anh không nói",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 98,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/98/path/audio.wav?Expires=1762701525&Signature=Xy-kt9nHkyYRIp9PFDlRU~nNFnGYzhJegD8VvRGvT5VZo4PdDJtkxwBNzx9okimQSpXAqcbZQM4Cd4zhL06EGiGX7DUiNthg4ONpTgwdZzSULcMUQlcZF~SGO1gsKBpnCmZeUeyUeX0OmGxZkFa-yTX-BrGOmQ~Mh0NqD7uNgZlpZu7rDOVn4jPaOfQrIeGYiertSE2Ud6GtqldLRL8uzBSl-Bo0tzVmiXFKh3oWZO0BC88VFDKsR6jsuY6tC9chPNg8fQm-hZ1M~cL5m2sV6cdsASIqEYldxrAm2IbsjPI1eYuuezARCbpdb1gDJpIhl4Q8KNSLyygBD1H61nHXlQ__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Cảm nhận về bài thơ Độc Tiểu Thanh kí",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      },
+      {
+        "row_idx": 99,
+        "row": {
+          "path": [
+            {
+              "src": "https://datasets-server.huggingface.co/assets/quochuy6543/audio_vietnamese/--/4b281afd2b769df7ffce5d9a6b4d9cbb83c13190/--/default/train/99/path/audio.wav?Expires=1762701525&Signature=TB5hIKzXQG5gU~UTAboh-G9lvxxC9YMCGC6EndzSN4OfyeDfeWri2DmaW-XyUSYhKF7xvidJlYu8XpbefLzJO~X-pXjRfAjV47B5N8Q5iJeCd5Wfo1ZnRqMJxg-WBEk8tLnUfQXYOK1A01NKwBEHZfwbKjLUXcp3D7Ux8ghUDJbpkpEaMp9fu6bJmZLSWEIFsIKdoLXHCEb0UQl9HH7mB8ZRovF70517o2rQKmXdffSr4CafMLWemsqIN4EiH1MKK3PH07RvOmzMSvszAJtKcjD08RUj5wDUTS5EHatfG8G-fQPSUIxplC4l9E5kxJR37dI4LOzHf3aLSDVeTbxw1A__&Key-Pair-Id=K3EI6M078Z3AC3",
+              "type": "audio/wav"
+            }
+          ],
+          "sentence": "Thu dùng dằng nên hoa mãi ngẩn ngơ",
+          "locale": "vi"
+        },
+        "truncated_cells": []
+      }
+    ],
+    "truncated": true
+  }
