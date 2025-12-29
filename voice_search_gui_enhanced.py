@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Ứng dụng tìm kiếm giọng nói tương tự - Giao diện Windows GUI (Enhanced Version)
-"""
 
 import os
 import sys
@@ -137,7 +132,7 @@ class VoiceSearchEngine:
         X_train = self.df_train[feature_cols].fillna(0).values
         self.scaler = StandardScaler()
         X_train_scaled = self.scaler.fit_transform(X_train)
-        
+        #do do cousin 
         if progress_callback:
             progress_callback("Đang train KNN model...")
         
@@ -544,7 +539,7 @@ class VoiceSearchEngine:
             # Tìm nhiều neighbors hơn nếu cần filter
             search_k = k * 3 if filter_dialect else k
             
-            # Tìm K nearest neighbors
+            # Tìm K nearest neighbors, tính cousine distance
             distances, indices = self.knn_model.kneighbors(feature_vector_scaled, n_neighbors=min(search_k, len(self.df_train)))
             
             # Lấy thông tin các samples tương tự
@@ -665,7 +660,7 @@ class VoiceSearchApp:
                             font=("Segoe UI", 20, "bold"), bg='#f5f5f5', fg='#2c3e50')
         title_label.pack()
         
-        subtitle_label = Label(title_frame, text="Ứng dụng tìm kiếm giọng nói tương tự bằng AI", 
+        subtitle_label = Label(title_frame, text="Ứng dụng tìm kiếm giọng nói tương tự bằng KNN", 
                               font=("Segoe UI", 10), bg='#f5f5f5', fg='#7f8c8d')
         subtitle_label.pack()
         

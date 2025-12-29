@@ -160,3 +160,4 @@ feature_cols = self.get_feature_columns()  # Loại bỏ cột metadata
 X_train = self.df_train[feature_cols].fillna(0).values  # Chỉ lấy features
 ```
 
+
